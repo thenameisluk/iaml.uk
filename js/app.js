@@ -1,0 +1,37 @@
+const container = document.querySelector(".container")
+const coffees = [
+  { name: "minecraft bedrock za darmo", image: "images/index/bedrock.jpg", link:"#" },
+  { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"#" },
+  { name: "serwery java na bedrocku", image: "images/index/java-bedrock.png", link:"#" },
+  { name: "Polskie SMP", image: "images/index/polskie_smp.png", link:"#" },
+  { name: "pusty", image: "", link:"#" },
+  { name: "pusty", image: "", link:"#" },
+  { name: "pusty", image: "", link:"#" },
+  { name: "pasjans (google)", image: "images/index/pasjans.png", link:"pasjans/index.html" },
+  { name: "test", image: "images/index/test.webp", link:"#" },
+]
+const showCoffees = () => {
+    let output = ""
+    coffees.forEach(
+      function ({ name, image, link }) {
+        return (output += `
+                <div class="card">
+                  <img class="card--avatar" alt="obrazek" src=${image} />
+                  <h1 class="card--title">${name}</h1>
+                  <a class="card--link" href="${link}">klik</a>
+                </div>
+                `)
+      }
+    )
+    container.innerHTML = output
+  }
+  
+  document.addEventListener("DOMContentLoaded", showCoffees)
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+        .register("/serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+    })
+  }
