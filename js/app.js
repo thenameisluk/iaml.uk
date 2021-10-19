@@ -4,7 +4,7 @@ const coffees = [
   { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"#" },
   { name: "serwery java na bedrocku", image: "images/index/java-bedrock.png", link:"#" },
   { name: "Polskie SMP", image: "images/index/polskie_smp.png", link:"#" },
-  { name: "pusty", image: "", link:"#" },
+  { name: "Addon", image: "images/index/addon.png", link:"#" },
   { name: "pusty", image: "", link:"#" },
   { name: "pusty", image: "", link:"#" },
   { name: "pasjans (google)", image: "images/index/pasjans.png", link:"pasjans/index.html" },
