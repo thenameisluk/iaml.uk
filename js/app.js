@@ -2,9 +2,9 @@ const container = document.querySelector(".container")
 const coffees = [
   { name: "minecraft bedrock za darmo", image: "images/index/bedrock.jpg", link:"subsite/freemc.html" },
   { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"#" },
-  { name: "serwery java na bedrocku", image: "images/index/java-bedrock.png", link:"#" },
-  { name: "Polskie SMP", image: "images/index/polskie_smp.png", link:"#" },
-  { name: "Addon", image: "images/index/addon.png", link:"#" },
+  { name: "serwery java na bedrocku", image: "images/index/java-bedrock.png", link:"subsite/geyser.html" },
+  { name: "Polskie SMP", image: "images/index/polskie_smp.png", link:"subsite/Poslkie_SMP.html" },
+  { name: "Addon", image: "images/index/addon.png", link:"subsite/addon.html" },
   { name: "pasjans (google)", image: "images/index/pasjans.png", link:"pasjans/index.html" },
   { name: "test", image: "images/index/test.webp", link:"subsite/template.html" },
 ]
