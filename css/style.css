@@ -51,6 +51,15 @@ h1 {
     margin: auto;
     padding: 1rem 0;
   }
+  .containera {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 0;
+  }
   .card {
     display: flex;
     align-items: center;
@@ -94,4 +103,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+  .Duzy {
+    font-size: 150%;
   }
