@@ -31,7 +31,7 @@ const showCoffees = () => {
             <li ><a href="me.html">o mnie</a></li>
             <li ><a href="index.html">wkrótce</a></li>
           </ul>
-  ";
+  "
   document.addEventListener("DOMContentLoaded", showCoffees)
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
