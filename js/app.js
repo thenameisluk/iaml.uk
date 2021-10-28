@@ -22,9 +22,7 @@ const showCoffees = () => {
       }
     )
     container.innerHTML = output
-  }
-  
-  nav.innerHTML = "
+    document.getElementById("nav").innerHTML = "
   <h1><img alt="luk" src="images/index/luk M+d.gif"></h1>
           <ul>
             <li ><a href="index.html">główny</a></li>
@@ -32,6 +30,8 @@ const showCoffees = () => {
             <li ><a href="index.html">wkrótce</a></li>
           </ul>
   "
+  }
+  
   document.addEventListener("DOMContentLoaded", showCoffees)
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
