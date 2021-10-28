@@ -28,8 +28,8 @@ const showCoffees = () => {
             <li ><a href="index.html">główny</a></li>
             <li ><a href="me.html">o mnie</a></li>
             <li ><a href="index.html">wkrótce</a></li>
-          </ul>
-  "
+          </ul>"
+  
   }
   
   document.addEventListener("DOMContentLoaded", showCoffees)
