@@ -22,6 +22,8 @@ const showCoffees = () => {
       }
     )
     container.innerHTML = output
+    
+    }
     document.getElementById("one").innerHTML = "główny";
     document.getElementById("one").href = "/index.html";
     document.getElementById("two").innerHTML = "o mnie";
@@ -32,9 +34,7 @@ const showCoffees = () => {
     document.getElementById("four").href = "";
     document.getElementById("five").innerHTML = "";
     document.getElementById("five").href = "";
-    }
-  
-  document.addEventListener("DOMContentLoaded", showCoffees)
+    document.addEventListener("DOMContentLoaded", showCoffees)
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
