@@ -22,7 +22,17 @@ const showCoffees = () => {
       }
     )
     container.innerHTML = output
-  }
+    document.getElementById("one").innerHTML = "główny";
+    document.getElementById("one").href = "/index.html";
+    document.getElementById("two").innerHTML = "o mnie";
+    document.getElementById("two").href = "/me.html";
+    document.getElementById("tree").innerHTML = "wkrótce";
+    document.getElementById("tree").href = "/index.htmt";
+    document.getElementById("four").innerHTML = "";
+    document.getElementById("four").href = "";
+    document.getElementById("five").innerHTML = "";
+    document.getElementById("five").href = "";
+    }
   
   document.addEventListener("DOMContentLoaded", showCoffees)
   if ("serviceWorker" in navigator) {
