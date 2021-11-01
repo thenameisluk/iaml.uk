@@ -1,0 +1,3 @@
+https://ezgif.com/maker/
+Delay time: 80
+don't stack frames : false

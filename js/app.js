@@ -1,11 +1,12 @@
 
 const container = document.querySelector(".container")
 const coffees = [
-  { name: "minecraft bedrock za darmo", image: "images/index/bedrock.jpg", link:"subsite/freemc.html" },
-  { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"subsite/lisek_tarcza.html" },
+  { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"subsite/Emoji.html" },
+  { name: "Mój pakiet emoji", image: "images/emoji/1.0/demo.gif", link:"subsite/lisek_tarcza.html" },
   { name: "serwery java na bedrocku", image: "images/index/java-bedrock.webp", link:"subsite/geyser.html" },
-  { name: "Polskie SMP", image: "images/index/polskie_smp.png", link:"subsite/Polskie_SMP.html" },
   { name: "Addon", image: "images/index/addon.png", link:"subsite/addon.html" },
+  { name: "minecraft za free", image: "images/index/bedrock.jpg", link:"subsite/freemc.html" },
+  { name: "Polskie SMP 1", image: "images/index/polskie_smp.png", link:"subsite/Polskie_SMP.html" },
   { name: "pasjans (google)", image: "images/index/pasjans.png", link:"pasjans/index.html" },
   { name: "test", image: "images/index/test.webp", link:"subsite/template.html" },
 ]
@@ -27,14 +28,14 @@ const showCoffees = () => {
     }
     window.onload = nav();
     function nav() {
-    document.getElementById("one").innerHTML = "główny";
+    document.getElementById("one").innerHTML = "Główny";
     document.getElementById("one").href = "/index.html";
-    document.getElementById("two").innerHTML = "o mnie";
+    document.getElementById("two").innerHTML = "O mnie";
     document.getElementById("two").href = "/me.html";
-    document.getElementById("tree").innerHTML = "wkrótce";
-    document.getElementById("tree").href = "/index.htmt";
-    document.getElementById("four").innerHTML = "";
-    document.getElementById("four").href = "";
+    document.getElementById("tree").innerHTML = "Polskie SMP";
+    document.getElementById("tree").href = "/subsite/Polskie_SMP.html";
+    document.getElementById("four").innerHTML = "Podziękowania";
+    document.getElementById("four").href = "/subsite/Podziękowania.html";
     document.getElementById("five").innerHTML = "";
     document.getElementById("five").href = "";
   }
