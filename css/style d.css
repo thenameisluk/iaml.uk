@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 * {
-  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
   
 }
 body {
   font-family: "Nunito", sans-serif;
-  background-color: white;
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 main {
   max-width: 900px;
@@ -36,34 +35,34 @@ li {
   margin-right: 1rem;
 }
 h1 {
-  color: #e74c3c;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 bb {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
 }
 bb2 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
   font-size: 300%;
 }
 bb3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
   font-size: 200%;
 }
 bb4 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
   font-size: 150%;
 }
 button {
   text-decoration: none;
-  background: #207c04;
-  color: #fff;
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
+    background: #207c04;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
 }
 .fix {
   display: block;
@@ -77,8 +76,8 @@ button {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(148, 147, 147);
-  color: white;
+  background-color: rgb(46, 46, 46);
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 .dark-mode {
@@ -109,7 +108,7 @@ button {
     flex-direction: column;
     width: 15rem auto;
     height: 15rem auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.19), 0 6px 6px rgba(255, 255, 255, 0.23);
     border-radius: 10px;
     margin: auto;
     overflow: hidden;
@@ -130,7 +129,7 @@ button {
     object-fit: cover;
   }
   .card--title {
-    color: #222;
+    color: rgb(255, 255, 255)240, 240, 240);
     font-weight: 700;
     text-transform: capitalize;
     font-size: 1.1rem;
@@ -139,7 +138,7 @@ button {
   .card--link {
     text-decoration: none;
     background: #207c04;
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 0.3rem 1rem;
     border-radius: 20px;
     
@@ -167,9 +166,8 @@ button {
     height: auto;
   }
   b. {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
   }
-  
   
