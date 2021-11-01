@@ -10,9 +10,9 @@ a {
   font-weight: bold;
 }
 body {
-  background: #fdfdfd;
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+  background-color: white;
+  color: black;
 }
 main {
   max-width: 900px;
@@ -61,10 +61,18 @@ bb4 {
   display: block;
 }
 .stopka {
-  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(148, 147, 147);
+  color: white;
   text-align: center;
 }
-
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -89,7 +97,6 @@ bb4 {
     flex-direction: column;
     width: 15rem auto;
     height: 15rem auto;
-    background: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
     margin: auto;
@@ -119,7 +126,7 @@ bb4 {
   }
   .card--link {
     text-decoration: none;
-    background: #db4938;
+    background: #207c04;
     color: #fff;
     padding: 0.3rem 1rem;
     border-radius: 20px;
@@ -144,8 +151,8 @@ bb4 {
     text-align: left;
   }
   .icon {
-    width: 100;
-    height: 100;
+    max-width: 3%;  
+    height: auto;
   }
   b. {
     color: rgb(0, 0, 0);

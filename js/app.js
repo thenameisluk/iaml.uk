@@ -1,8 +1,9 @@
 
 const container = document.querySelector(".container")
 const coffees = [
-  { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"subsite/Emoji.html" },
-  { name: "Mój pakiet emoji", image: "images/emoji/1.0/demo.gif", link:"subsite/lisek_tarcza.html" },
+  { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"subsite/lisek_tarcza.html" },
+  { name: "Polskie SMP 2", image: "images/index/polskie_smp.png", link:"subsite/Polskie_SMP_2.html" },
+  { name: "Mój pakiet emoji", image: "images/emoji/1.0/demo.gif", link:"subsite/Emoji.html" },
   { name: "serwery java na bedrocku", image: "images/index/java-bedrock.webp", link:"subsite/geyser.html" },
   { name: "Addon", image: "images/index/addon.png", link:"subsite/addon.html" },
   { name: "minecraft za free", image: "images/index/bedrock.jpg", link:"subsite/freemc.html" },
