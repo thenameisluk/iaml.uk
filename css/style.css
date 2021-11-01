@@ -8,6 +8,7 @@ a {
   color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
+  
 }
 body {
   font-family: "Nunito", sans-serif;
@@ -55,6 +56,9 @@ bb4 {
   color: rgb(0, 0, 0);
   font-weight: bolder;
   font-size: 150%;
+}
+.fix {
+  display: block;
 }
 .ii {
   text-align: center;

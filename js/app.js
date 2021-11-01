@@ -35,7 +35,7 @@ const showCoffees = () => {
     document.getElementById("two").href = "/me.html";
     document.getElementById("tree").innerHTML = "Polskie SMP";
     document.getElementById("tree").href = "/subsite/Polskie_SMP.html";
-    document.getElementById("four").innerHTML = "Podziękowania";
+    document.getElementById("four").innerHTML = "Podzięki";
     document.getElementById("four").href = "/subsite/Podziękowania.html";
     document.getElementById("five").innerHTML = "";
     document.getElementById("five").href = "";
