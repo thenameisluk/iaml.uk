@@ -59,9 +59,9 @@ bb4 {
 }
 button {
   text-decoration: none;
-    background: #207c04;
-    color: #fff;
-    padding: 0.3rem 1rem;
+    background: #000000;
+    color: rgb(253, 253, 253);
+    padding: 2mm 2mm;
     border-radius: 20px;
 }
 .fix {
@@ -162,7 +162,7 @@ button {
     text-align: left;
   }
   .icon {
-    max-width: 7%;  
+    max-width: 1cm;  
     height: auto;
   }
   b. {

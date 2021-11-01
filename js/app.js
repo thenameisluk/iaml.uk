@@ -39,7 +39,30 @@ const showCoffees = () => {
     document.getElementById("four").href = "/subsite/Podziękowania.html";
     document.getElementById("five").innerHTML = "";
     document.getElementById("five").href = "";
+    let d = getCookie("d")
+    if (d = "")
+    {
+      setCookie("d","true","36500")
+    } else if (d = "true") {
+      dark();
+    } else if (d = "false") {
+      light();
+    } else {
+      setCookie("d","true","36500")
+    }
   }
+  function M() {
+    let d = getCookie("d")
+    if (d = "true") {
+      light();
+      setCookie("d","false","36500")
+    } else {
+      dark();
+      setCookie("d","true","36500")
+    }
+  }
+  
+
     document.addEventListener("DOMContentLoaded", showCoffees)
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
@@ -48,4 +71,33 @@ const showCoffees = () => {
         .then(res => console.log("service worker registered"))
         .catch(err => console.log("service worker not registered", err))
     })
+  }
+  /* funkcje */
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function dark() {
+    document.getElementById("logo").src = "images/index/luk M.gif";
+    document.getElementById("css").href = "css/style d.css";
+  }
+  function light() {
+    document.getElementById("logo").src = "images/index/luk M+d.gif";
+    document.getElementById("css").href = "css/style.css";
   }
