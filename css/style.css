@@ -6,15 +6,21 @@
   box-sizing: border-box;
 }
 a {
-  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
-  
+  color: rgb(40, 168, 57);
+}
+adark {
+  color: white;
 }
 body {
   font-family: "Nunito", sans-serif;
   background-color: white;
-  color: black;
+ color: black;
+}
+.bdark {
+ background-color: black;
+ color: white;
 }
 main {
   max-width: 900px;
@@ -36,56 +42,57 @@ li {
   margin-right: 1rem;
 }
 h1 {
-  color: #e74c3c;
   margin-bottom: 0.5rem;
 }
 bb {
-  color: rgb(0, 0, 0);
   font-weight: bolder;
 }
 bb2 {
-  color: rgb(0, 0, 0);
   font-weight: bolder;
   font-size: 300%;
 }
 bb3 {
-  color: rgb(0, 0, 0);
   font-weight: bolder;
   font-size: 200%;
 }
 bb4 {
-  color: rgb(0, 0, 0);
   font-weight: bolder;
   font-size: 150%;
 }
 button {
-  
+  color: transparent;
+  background: transparent;
   text-decoration: none;
-  background: #ffffff;
+  border: none;
+  outline: none;
+}
+stopka {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);
+}
+.sdark {
+  background: rgb(92, 92, 92);
   color: rgb(0, 0, 0);
-  padding: 2mm 2mm;
-  border-radius: 20px;
 }
 .fix {
   display: block;
+}
+.logo {
+  height: 1.3cm;
+}
+.ikona {
+  height: 0.7cm;
 }
 .ii {
   text-align: center;
   display: block;
 }
-.stopka {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(182, 182, 182);
-  color: white;
-  text-align: center;
-}
-.dark-mode {
-  background-color: black;
-  color: white;
-}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -131,7 +138,6 @@ button {
     object-fit: cover;
   }
   .card--title {
-    color: #222;
     font-weight: 700;
     text-transform: capitalize;
     font-size: 1.1rem;
@@ -168,7 +174,6 @@ button {
     height: auto;
   }
   b. {
-    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
   }

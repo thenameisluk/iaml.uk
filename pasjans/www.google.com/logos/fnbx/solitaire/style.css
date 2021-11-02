@@ -30,7 +30,4 @@ h1 {
 .link {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  }
-  .fix {
-    display: block;
-  }
+}

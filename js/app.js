@@ -35,31 +35,11 @@ const showCoffees = () => {
     document.getElementById("two").href = "/me.html";
     document.getElementById("tree").innerHTML = "Polskie SMP";
     document.getElementById("tree").href = "/subsite/Polskie_SMP.html";
-    document.getElementById("four").innerHTML = "Podzięki";
+    document.getElementById("four").innerHTML = "";
     document.getElementById("four").href = "/subsite/Podziękowania.html";
     document.getElementById("five").innerHTML = "";
     document.getElementById("five").href = "";
-    let d = getCookie("d")
-    if (d = "")
-    {
-      setCookie("d","true","36500")
-    } else if (d = "true") {
-      dark();
-    } else if (d = "false") {
-      light();
-    } else {
-      setCookie("d","true","36500")
-    }
-  }
-  function M() {
-    let d = getCookie("d")
-    if (d = "true") {
-      light();
-      setCookie("d","false","36500")
-    } else {
-      dark();
-      setCookie("d","true","36500")
-    }
+    dark();
   }
   
 
@@ -93,11 +73,29 @@ const showCoffees = () => {
     let expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
+  function mode() {
+    var d = localStorage.getItem("dark");
+    if (d = "true") {
+      dark()
+      localStorage.setItem("dark", "false");
+    } else if (d = "false") {
+      dark()
+      localStorage.setItem("dark", "true");
+    } else {
+      dark()
+      localStorage.setItem("dark", "true");
+    }
+  }
   function dark() {
-    document.getElementById("logo").src = "images/index/luk M.gif";
-    document.getElementById("css").href = "css/style d.css";
+    var e = document.body;
+    e.classList.toggle("bdark");
+    var ea = document.getElementById("s")
+    ea.classList.toggle("sdark");
+    let d = document.cookie;
+    
   }
-  function light() {
-    document.getElementById("logo").src = "images/index/luk M+d.gif";
-    document.getElementById("css").href = "css/style.css";
-  }
+/*
+  localStorage.setItem("lastname", "Smith");
+  localStorage.getItem("lastname");
+*/
+
