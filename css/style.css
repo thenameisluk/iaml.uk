@@ -15,8 +15,10 @@ adark {
 }
 body {
   font-family: "Nunito", sans-serif;
-  background-color: white;
- color: black;
+  /*background-color: white;
+ color: black;*/
+ background-color: black;
+ color: white;
 }
 .bdark {
  background-color: black;
@@ -72,8 +74,10 @@ stopka {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background: rgb(36, 36, 36);
-  color: rgb(255, 255, 255);
+  /*background: rgb(36, 36, 36);
+  color: rgb(255, 255, 255);*/
+  background: rgb(92, 92, 92);
+  color: rgb(0, 0, 0);
 }
 .sdark {
   background: rgb(92, 92, 92);
@@ -117,7 +121,7 @@ stopka {
     flex-direction: column;
     width: 15rem auto;
     height: 15rem auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.19), 0 6px 6px rgba(255, 255, 255, 0.23);
     border-radius: 10px;
     margin: auto;
     overflow: hidden;

@@ -1,4 +1,4 @@
-
+  
 const container = document.querySelector(".container")
 const coffees = [
   { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"subsite/lisek_tarcza.html" },
@@ -6,7 +6,6 @@ const coffees = [
   { name: "Mój pakiet emoji", image: "images/emoji/1.0/demo.gif", link:"subsite/Emoji.html" },
   { name: "serwery java na bedrocku", image: "images/index/java-bedrock.webp", link:"subsite/geyser.html" },
   { name: "Addon", image: "images/index/addon.png", link:"subsite/addon.html" },
-  { name: "minecraft za free", image: "images/index/bedrock.jpg", link:"subsite/freemc.html" },
   { name: "Polskie SMP 1", image: "images/index/polskie_smp.png", link:"subsite/Polskie_SMP.html" },
   { name: "pasjans (google)", image: "images/index/pasjans.png", link:"pasjans/index.html" },
   { name: "test", image: "images/index/test.webp", link:"subsite/template.html" },
@@ -27,6 +26,8 @@ const showCoffees = () => {
     container.innerHTML = output
     
     }
+    
+
     window.onload = nav();
     function nav() {
     document.getElementById("one").innerHTML = "Główny";
@@ -39,7 +40,7 @@ const showCoffees = () => {
     document.getElementById("four").href = "/subsite/Podziękowania.html";
     document.getElementById("five").innerHTML = "";
     document.getElementById("five").href = "";
-    dark();
+    
   }
   
 
@@ -73,27 +74,9 @@ const showCoffees = () => {
     let expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
-  function mode() {
-    var d = localStorage.getItem("dark");
-    if (d = "true") {
-      dark()
-      localStorage.setItem("dark", "false");
-    } else if (d = "false") {
-      dark()
-      localStorage.setItem("dark", "true");
-    } else {
-      dark()
-      localStorage.setItem("dark", "true");
-    }
-  }
-  function dark() {
-    var e = document.body;
-    e.classList.toggle("bdark");
-    var ea = document.getElementById("s")
-    ea.classList.toggle("sdark");
-    let d = document.cookie;
-    
-  }
+  
+  
+  
 /*
   localStorage.setItem("lastname", "Smith");
   localStorage.getItem("lastname");
