@@ -92,6 +92,10 @@ stopka {
 .ikona {
   height: 0.7cm;
 }
+.transparent {
+  height: 1.3cm;
+  background-color: white;
+}
 .ii {
   text-align: center;
   display: block;

@@ -4,6 +4,8 @@ const coffees = [
   { name: "tarcza lisek", image: "images/zegarek/fox.webp", link:"subsite/lisek_tarcza.html" },
   { name: "Polskie SMP 2", image: "images/index/polskie_smp.png", link:"subsite/Polskie_SMP_2.html" },
   { name: "Mój pakiet emoji", image: "images/emoji/1.0/demo.gif", link:"subsite/Emoji.html" },
+  { name: "serie", image: "images/ikony/serie.png", link:"subsite/serie.html" },
+  { name: "Podziękowanie", image: "images/ikony/7.PNG", link:"subsite/Podziękowania.html" },
   { name: "serwery java na bedrocku", image: "images/index/java-bedrock.webp", link:"subsite/geyser.html" },
   { name: "Addon", image: "images/index/addon.png", link:"subsite/addon.html" },
   { name: "Polskie SMP 1", image: "images/index/polskie_smp.png", link:"subsite/Polskie_SMP.html" },
