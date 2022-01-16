@@ -1,0 +1,155 @@
+@font-face {
+  font-family: minecraft_pl_font;
+  src: url("/czcionki/minecraft_pl_font.woff");
+}
+/* podstawowe elementy*/
+html {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+body {
+  font-family: minecraft_pl_font;
+  text-align: center;
+}
+tytul {
+  color: white;
+  font-size: 1cm;
+}
+/*lisek góra */
+.imgL {
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/*wielokrotnego użytku*/
+.tekst {
+  font-size: 0.7cm;
+}
+.fixA {
+  color: white;
+  margin: 2mm;
+  text-decoration: none;
+  font-size: 1cm;
+}
+.bold {
+  font-weight: bold;
+}
+.icon {
+  margin-top: 3px;
+  height: 40px;
+}
+.buttonFix {
+  background-color: transparent;
+  border: 0;
+  color: #fefbef;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 1.5rem;
+  width: 100px;
+}
+/*pojemnik i przedmioty*/
+.pojemnik {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+.itemP {
+  background-color: rgb(218, 153, 34);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin: 3px;
+}
+.itemZ {
+  background-color: rgb(26, 153, 26);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin: 3px;
+}
+.itemJZ {
+  background-color: rgb(33, 236, 33);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin: 3px;
+}
+.itemN {
+  background-color: rgb(23, 105, 143);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin: 3px;
+}
+.itemC {
+  background-color: rgb(180, 50, 50);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin: 3px;
+}
+.itemB {
+  background-color: rgb(224, 200, 200);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  color: black;
+  border-radius: 2px;
+  margin: 3px;
+}
+.itemSZ {
+  background-color: rgb(87, 86, 86);
+  font-size: 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 2px;
+  margin: 3px;
+}
+/*dodatkowe przedmioty do itemów*/
+.itemIMGR {
+  height: 100px;
+  border-radius: 2px;
+  float: right;
+}
+.itemIMGL {
+  width: 100px;
+  border-radius: 2px;
+  float: left;
+}
+.guzik {
+  color: white;
+  margin: 2mm;
+  text-decoration: none;
+  font-size: 1cm;
+  display: block;
+  background-color: rgb(48, 48, 48);
+  border-radius: 10px;
+  margin-left: 107px;
+}
+/*inne*/
+.glowka {
+  padding: 0.5cm;
+  text-align: center;
+  background: #3b3b3b;
+  color: rgb(255, 255, 255);
+  border-radius: 0.3cm;
+}
+.stopka {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  text-align: center;
+  height: 46px;
+}

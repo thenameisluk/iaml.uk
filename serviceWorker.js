@@ -1,16 +1,14 @@
-const staticDevCoffee = "luktvpl"
+const nazwa = "luk"
 const assets = [
   "/",
   "/index.html",
   "/css/style.css",
   "/js/app.js",
-  "/images/index/",
-  "/images/zegarek/",
 ]
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
-    caches.open(staticDevCoffee).then(cache => {
+    caches.open(nazwa).then(cache => {
       cache.addAll(assets)
     })
   )
