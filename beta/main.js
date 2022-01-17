@@ -1,14 +1,15 @@
 
-
+var finishtext = true;
 function start(){
-  var ctx = document.getElementById("ctx").getContext("2d");
-  ctx.fillStyle = "gray";
-  ctx.fillRect(0,200,300, 300);
-    
+    test();
 }
 function ctx(){
     var ctx = document.getElementById("ctx").getContext("2d");
     return ctx;
+}
+function ctx2(){
+  var ctx2 = document.getElementById("ctx").getContext("2d");
+return ctx2;
 }
 function pisz(co,x,y,kolor){
     var f = new FontFace('minecraft', 'url("/czcionki/minecraft_pl_font.woff")');
@@ -55,12 +56,14 @@ function Obrazek(imgs,x,y,dx,dy) {
 };
   
 }
-
+function finish(){
+  console.log(finishtext)
+}
 function rpgText(text,kolor,x,y) {
     
     
     var ctx2 = document.getElementById("ctx2").getContext("2d");
-    
+    finishtext = false;
   ctx2.fillStyle = "gray";
   ctx2.fillRect(0,0,300, 100);
   var f = new FontFace('minecraft', 'url("/czcionki/minecraft_pl_font.woff")');
@@ -94,6 +97,12 @@ function rpgText(text,kolor,x,y) {
       }, 100);
       
     }
+    else {
+    setTimeout(() => {
+      ctx2.fillStyle = "gray";
+      ctx2.fillRect(0,0,300, 100);
+      finishtext = true;
+    }, 3000);}
     }
     
     
