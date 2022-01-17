@@ -1,8 +1,9 @@
 
 
 function start(){
-    
-    pisz("hej",0,50,"white")
+  var ctx = document.getElementById("ctx").getContext("2d");
+  ctx.fillStyle = "gray";
+  ctx.fillRect(0,200,300, 300);
     
 }
 function ctx(){
@@ -27,7 +28,9 @@ function pisz(co,x,y,kolor){
 function test(){
     Obrazek("/obrazki/ikonki/1.PNG",0,0,50,50)
     
-    rpgText("witam to jest tekst testowy i się nad nim napociłem","white",10,250);
+    rpgText("trochę napracowałem się nad tym tekstem. więc zacznij go lepiej podziwiać bo to naprawdę potężny projekt","white",3,20);
+    var x = document.getElementById("in").value;
+    console.log(x);
     
 
     
@@ -56,20 +59,41 @@ function Obrazek(imgs,x,y,dx,dy) {
 function rpgText(text,kolor,x,y) {
     
     
-    var ctx = document.getElementById("ctx").getContext("2d");
+    var ctx2 = document.getElementById("ctx2").getContext("2d");
     
-  ctx.fillStyle = "black";
-  ctx.fillRect(0,200,300, 300);
+  ctx2.fillStyle = "gray";
+  ctx2.fillRect(0,0,300, 100);
   var f = new FontFace('minecraft', 'url("/czcionki/minecraft_pl_font.woff")');
-  ctx.fillStyle = kolor;
+  ctx2.fillStyle = kolor;
   f.load().then(function(font) {
     
     document.fonts.add(f);
-    ctx.font="20px minecraft";
+    ctx2.font="30px minecraft";
     var atext = "";
-    for (var i = 0; i < text.length; i=i++) {
-      atext = atext+text.charAt(i);
-      ctx.fillText(atext,x,y);
+    i = 0
+    add(text,atext,i,x,y);
+    function add(text,atext,i,x,y){
+    
+    atext = atext+text.charAt(i);
+    ctx2.fillText(atext,x,y);
+    console.log(atext);
+    i++
+    ai=text.length;
+    console.log(ai)
+    if(i!=ai){
+      var atextl = atext.length;
+      if(atextl>27) 
+      {
+        if(text.charAt(atextl-1)!=" "&&text.charAt(atextl)!=" ")ctx2.fillText(atext+"-",x,y);
+        atext=""
+        
+        y=y+20;
+      }
+      setTimeout(() => {
+        add(text,atext,i,x,y)
+      }, 100);
+      
+    }
     }
     
     
