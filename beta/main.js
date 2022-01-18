@@ -1,7 +1,7 @@
 
 var finishtext = true;
 function start(){
-    test();
+    
 }
 function ctx(){
     var ctx = document.getElementById("ctx").getContext("2d");
