@@ -23,6 +23,9 @@ tytul {
   margin-left: 10px;
 }
 /*wielokrotnego użytku*/
+.inv {
+  color: transparent;
+}
 .imgs {
   height: 100px;
   align-items: center;
