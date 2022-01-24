@@ -23,6 +23,10 @@ tytul {
   margin-left: 10px;
 }
 /*wielokrotnego użytku*/
+.imgs {
+  height: 100px;
+  align-items: center;
+}
 .tekst {
   font-size: 0.7cm;
 }
@@ -31,6 +35,11 @@ tytul {
   margin: 2mm;
   text-decoration: none;
   font-size: 1cm;
+}
+.fixAb {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
 }
 .bold {
   font-weight: bold;
@@ -50,6 +59,19 @@ tytul {
   width: 100px;
 }
 /*pojemnik i przedmioty*/
+.ob {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.ss {
+  border-radius: 2px;
+  height: 140px;
+  width: 100px;
+  margin: 5px;
+}
 .pojemnik {
   display: grid;
   text-align: center;
@@ -110,7 +132,7 @@ tytul {
   background-color: rgb(87, 86, 86);
   font-size: 15px;
   width: 300px;
-  height: auto;
+  height: 100px;
   border-radius: 2px;
   margin: 3px;
 }
@@ -124,6 +146,11 @@ tytul {
   width: 100px;
   border-radius: 2px;
   float: left;
+}
+.itemIMG {
+  width: 100px;
+  border-radius: 2px;
+  margin: 0px;
 }
 .guzik {
   color: white;
