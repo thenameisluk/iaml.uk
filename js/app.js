@@ -2,7 +2,8 @@
 /*wkrótce*/
 const container = document.querySelector(".pojemnik")
 const coffees = [
-  { name: "Test", image: "obrazki/firmowe/luktvpl min.png", link:"/beta/index.html" },
+  { name: "Czarna lista", image: "/obrazki/miniaturki/black_list.png", link:"/beta/index.html" },
+  { name: "Beta RPG", image: "/obrazki/miniaturki/rpg.png", link:"/beta/index.html" },
 ]
 const showCoffees = () => {
     let output = ""

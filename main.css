@@ -11,10 +11,15 @@ html {
 body {
   font-family: minecraft_pl_font;
   text-align: center;
+  font-size: 0.7cm;
 }
 tytul {
   color: white;
   font-size: 1cm;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 /*lisek góra */
 .imgL {
@@ -23,6 +28,17 @@ tytul {
   margin-left: 10px;
 }
 /*wielokrotnego użytku*/
+.ods {
+  margin: 4px;
+}
+.b {
+  font-weight: bold;
+  font-size: 1cm;
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
 .inv {
   color: transparent;
 }
