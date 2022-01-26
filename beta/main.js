@@ -1,16 +1,12 @@
-
+var mode = 0;
+var ctx = document.getElementById("ctx").getContext("2d");
+var ctx2 = document.getElementById("ctx2").getContext("2d");
+var ctx2;
 var finishtext = true;
 function start(){
     
 }
-function ctx(){
-    var ctx = document.getElementById("ctx").getContext("2d");
-    return ctx;
-}
-function ctx2(){
-  var ctx2 = document.getElementById("ctx").getContext("2d");
-return ctx2;
-}
+
 function pisz(co,x,y,kolor){
     var f = new FontFace('minecraft', 'url("/czcionki/minecraft_pl_font.woff")');
 
@@ -20,9 +16,9 @@ function pisz(co,x,y,kolor){
       console.log('font ready');
       // Add font on the html page
       document.fonts.add(font);
-      ctx().fillStyle = kolor;
-      ctx().font = '60px minecraft';
-      ctx().fillText(co, x,y);
+      ctx.fillStyle = kolor;
+      ctx.font = '60px minecraft';
+      ctx.fillText(co, x,y);
       
     });
 }
@@ -38,7 +34,6 @@ function test(){
 }
 /*funkcje rendrowania*/
 function Obrazek(imgs,x,y,dx,dy) {
-  var ctx = document.getElementById("ctx").getContext("2d");
   ctx .fillStyle = "black";
   ctx .fillRect(x, y, dx, dy);
 
@@ -59,10 +54,12 @@ function Obrazek(imgs,x,y,dx,dy) {
 function finish(){
   console.log(finishtext)
 }
+function srpgText(text) {
+  rpgText(text,"white",3,20);
+}
 function rpgText(text,kolor,x,y) {
     
     
-    var ctx2 = document.getElementById("ctx2").getContext("2d");
     finishtext = false;
   ctx2.fillStyle = "gray";
   ctx2.fillRect(0,0,300, 100);
@@ -98,11 +95,12 @@ function rpgText(text,kolor,x,y) {
       
     }
     else {
+      var dlugosctxt = atext.length*300
     setTimeout(() => {
       ctx2.fillStyle = "gray";
       ctx2.fillRect(0,0,300, 100);
       finishtext = true;
-    }, 3000);}
+    }, dlugosctxt);}
     }
     
     
