@@ -22,7 +22,9 @@ function getblock(x,y){
     var bname = "a"+chnpx+chnpy;
     try{
        let r = window[bname];
-       return r [blok]; 
+       var c = r[blok].length;
+       if(c=25) return r [blok]; 
+       else var c = 0/0;
     }
     catch{
         return "00000000000000000000z0000";

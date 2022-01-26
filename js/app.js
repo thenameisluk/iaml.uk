@@ -2,8 +2,9 @@
 /*wkrótce*/
 const container = document.querySelector(".pojemnik")
 const coffees = [
-  { name: "Beta RPG", image: "/obrazki/miniaturki/rpg.png", link:"/beta/index.html" },
-  { name: "Czarna lista", image: "/obrazki/miniaturki/black_list.png", link:"/podstrony/black_list.html" }
+  { name: "Moje kanały", image: "/obrazki/miniaturki/my_chanals.webp", link:"/podstrony/my_chanals.html" },
+  { name: "Beta RPG", image: "/obrazki/miniaturki/rpg.webp", link:"/beta/index.html" },
+  { name: "Czarna lista", image: "/obrazki/miniaturki/black_list.webp", link:"/podstrony/black_list.html" }
 ]
 const showCoffees = () => {
     let output = ""
