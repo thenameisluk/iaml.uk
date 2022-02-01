@@ -46,6 +46,10 @@ p {
   height: 100px;
   align-items: center;
 }
+.imgbs {
+  width: 300px;
+  align-items: center;
+}
 .tekst {
   font-size: 0.7cm;
 }
