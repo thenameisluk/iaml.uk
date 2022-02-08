@@ -7,6 +7,7 @@ const coffees = [
   { name: "Animowany Luk", image: "/obrazki/miniaturki/luk_kukła.webp", link: "/podstrony/luk_kukla.html" },
   { name: "Czarna lista", image: "/obrazki/miniaturki/black_list.webp", link: "/podstrony/black_list.html" }
 ]
+
 const showCoffees = () => {
   let output = ""
   coffees.forEach(
@@ -57,3 +58,11 @@ function getCookie(cname) {
   }
   return "";
 }
+
+//websocket
+var ip="localhost";
+const ws = new WebSocket("ws://"+ip+":8080")
+ws.addEventListener("open", () => {
+  console.log("połączono")
+  ws.send("test");
+})
