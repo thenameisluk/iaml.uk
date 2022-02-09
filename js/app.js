@@ -62,7 +62,7 @@ function getCookie(cname) {
 //websocket
 var ip = "localhost";
 
-const ws = new WebSocket("wss://luknet.herokuapp.com:443");
+const ws = new WebSocket("ws://luknet.herokuapp.com:80");
 
 ws.addEventListener("open", () => {
   console.log("połączono")
