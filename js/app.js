@@ -60,7 +60,7 @@ function getCookie(cname) {
 }
 
 //websocket
-var ip="localhost";
+var ip = "localhost";
 
 const ws = new WebSocket("ws://luknet.herokuapp.com:80");
 
