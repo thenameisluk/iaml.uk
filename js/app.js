@@ -60,7 +60,6 @@ function getCookie(cname) {
 }
 
 //websocket
-var ip = "localhost";
 /*
 const ws = new WebSocket("ws://luknet.duckdns.org:56009");
 
