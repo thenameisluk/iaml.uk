@@ -60,14 +60,14 @@ function getCookie(cname) {
 }
 
 //websocket
-/*
-const ws = new WebSocket("ws://luknet.duckdns.org:56009");
+
+const ws = new WebSocket("wss://luknet.duckdns.org:3306");
 
 ws.addEventListener("open", () => {
   console.log("połączono")
-  ws.send("test");
-  ws.addEventListener("message", data => {
-    console.log(data.data)
+  ws.send("witam");
+  ws.addEventListener("message", msg => {
+    alert(msg.data);
   })
 })
-*/
+
