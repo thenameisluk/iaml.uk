@@ -55,9 +55,13 @@ p {
 }
 .fixA {
   color: white;
-  margin: 2mm;
   text-decoration: none;
-  font-size: 1cm;
+}
+.fixAbc {
+  color: white;
+  margin: 1mm;
+  text-decoration: none;
+  font-size: 9mm;
 }
 .fixAb {
   color: white;
