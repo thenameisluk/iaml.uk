@@ -1,5 +1,6 @@
 
 /*wkrótce*/
+
 const container = document.querySelector(".pojemnik")
 const coffees = [
   { name: "Moje kanały", image: "/obrazki/miniaturki/my_chanals.webp", link: "/podstrony/my_chanals.html" },
@@ -60,14 +61,14 @@ function getCookie(cname) {
 }
 
 //websocket
-
-const ws = new WebSocket("wss://luknet.duckdns.org:3306");
+  const ws = new WebSocket("wss://luknet.duckdns.org:3306");
 
 
 
 //konta
+var user;
 try {
-var st = document.getElementById("st")
+var st = document.getElementById("st");
 var space = document.getElementById("acc");
 }catch{
 
@@ -75,31 +76,52 @@ var space = document.getElementById("acc");
 st.innerHTML = '<b>status : offline</b>';
 ws.addEventListener("open", () => {
   st.innerHTML = '<p><b>status : online</b></p>';
-  console.log("połączono")
-  ws.send("i:acc");
+  console.log("połączono");
+  if(getCookie("logged")==true) {
+    ws.send("l:"+getCookie("uuid"));
+  } else {
+    lpage();
+  }
   ws.addEventListener("message", msg => {
-    var command = msg.data.split(":")
-    if(msg.data="g:id"){
-      if(getCookie("reg")=="y"){
-      ws.send("id:"+getCookie("uuid"))
-    }else{
-      ws.send("c:id");
-      
+    var command = msg.toString().split(":");
+    if(msg.toString().charAt[0]="{") {
+      user = JSON.parse(msg.toString());
     }
-    }
-    if(command[0]=="id"){
-        alert("dostałęś własne id");
-        setCookie("reg","y",3600)
-        setCookie("uuid",command[1],3600)
+    if(command[0]==e) {
+      lserror(msg.toString());
     }
     
-  })
-  ws.addEventListener("close", lol => {
-    st.innerHTML = '<b>status : offline</b>';
-  })
-})
+})})
+//acc
+function lpage() {
+  space.innerHTML = '<p><b><div class="input-container"><input type="text" id="login" required=""/><label>login</label></div></b></p><p><b><div class="input-container"><input type="password" id="password" required=""/><label>hasło</label></div></b></p><div id="error" class="error"></div><p><button onclick="login()" class="button-3">zaloguj</button><button onclick="rpage()" class="button-3">zarejestruj</button></p>';
+}
+function rpage() {
+  space.innerHTML = '<p><b><div class="input-container"><input type="text" id="login" required=""/><label>login</label></div></b></p><p><b><div class="input-container"><input type="text" id="mail" required=""/><label>e-mail</label></div></b></p><p><b><div class="input-container"><input type="date" id="data" required=""/><label>data urodzenia</label></div></b></p><p><b><div class="input-container"><input type="password" id="password" required=""/><label>hasło</label></div></b></p><p><b><div class="input-container"><input type="password" id="password2" required=""/><label>powtórz hasło</label></div></b></p><div id="error" class="error"></div><p><button onclick="lpage()" class="button-3">zaloguj</button><button onclick="register()" class="button-3">zarejestruj</button></p>';
+}
+function login() {
+  var logini = document.getElementById("login").value;
+  var passwordi = document.getElementById("password").value;
+  ws.send("l:"+logini+":"+passwordi);
+}
+function register() {
+  if(logini.length>=5) {
+    if(passwordi.length>=8) {
+      //rejestracja
 
+    } else {
+      lserror("zbyt krótkie hasło")
+    }
+    
+  }else{
+    lserror("zbyt krótki login")
+  }
+}
+function lserror(lserror)  {
+  document.getElementById("error").innerHTML = lserror
+}
 //cookie
+
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -121,3 +143,16 @@ function getCookie(cname) {
   }
   return "";
 }
+//input
+let timer;
+
+document.addEventListener('input', e => {
+  const el = e.target;
+  
+  if( el.matches('[data-color]') ) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
+    }, 100)
+  }
+})
