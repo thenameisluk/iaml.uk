@@ -61,43 +61,79 @@ function getCookie(cname) {
 }
 
 //websocket
-  const ws = new WebSocket("wss://luknet.duckdns.org:3306");
-
-
+var ws = new WebSocket("wss://luknet.duckdns.org:3306");
+//var ws = new WebSocket("ws://localhost:3306");
+var userdata;
 
 //konta
 var user;
 try {
 var st = document.getElementById("st");
 var space = document.getElementById("acc");
+st.innerHTML = '<b>status : offline</b>';
 }catch{
 
 }
-st.innerHTML = '<b>status : offline</b>';
+var ssid
+
 ws.addEventListener("open", () => {
   st.innerHTML = '<p><b>status : online</b></p>';
   console.log("połączono");
-  if(getCookie("logged")==true) {
-    ws.send("l:"+getCookie("uuid"));
-  } else {
+  if(getCookie("ifssid")=="true") {
+    ws.send("ssid:"+getCookie("ssid"))
     lpage();
+  } else {
+    ws.send("g:ssid");
   }
   ws.addEventListener("message", msg => {
-    var command = msg.toString().split(":");
-    if(msg.toString().charAt[0]="{") {
-      user = JSON.parse(msg.toString());
-    }
-    if(command[0]==e) {
-      lserror(msg.toString());
-    }
+    alert(msg.data);
+    var command = msg.data.toString().split(":");
     
+    var mcmd = command[0];
+    
+    switch (command[0]){
+      case "e" :
+        lserror(command[1]);
+      break
+      case "g" :
+        alert(command[1])
+        if(command[1]=="MailCode") activationpage(command[2])
+      break
+      case "ssid":
+        setCookie("ifssid","true",3600);
+        setCookie("ssid",command[1],3600);
+        ws.send("ssid:"+command[1])
+      break
+      case '{"username"':
+        user = JSON.parse(msg.data)
+        alert("userdata collected")
+      break
+    }
+    ws.addEventListener("close",()=>lserror("rozłączono od serwera"))
+    
+    
+
 })})
 //acc
 function lpage() {
   space.innerHTML = '<p><b><div class="input-container"><input type="text" id="login" required=""/><label>login</label></div></b></p><p><b><div class="input-container"><input type="password" id="password" required=""/><label>hasło</label></div></b></p><div id="error" class="error"></div><p><button onclick="login()" class="button-3">zaloguj</button><button onclick="rpage()" class="button-3">zarejestruj</button></p>';
 }
 function rpage() {
-  space.innerHTML = '<p><b><div class="input-container"><input type="text" id="login" required=""/><label>login</label></div></b></p><p><b><div class="input-container"><input type="text" id="mail" required=""/><label>e-mail</label></div></b></p><p><b><div class="input-container"><input type="date" id="data" required=""/><label>data urodzenia</label></div></b></p><p><b><div class="input-container"><input type="password" id="password" required=""/><label>hasło</label></div></b></p><p><b><div class="input-container"><input type="password" id="password2" required=""/><label>powtórz hasło</label></div></b></p><div id="error" class="error"></div><p><button onclick="lpage()" class="button-3">zaloguj</button><button onclick="register()" class="button-3">zarejestruj</button></p>';
+  space.innerHTML = '<p><b><div class="input-container"><input type="text" id="login" required=""/><label>login</label></div></b></p><p><b><div class="input-container"><input type="text" id="mail" required=""/><label>e-mail</label></div></b></p><p><b><div class="input-container"><input type="password" id="password" required=""/><label>hasło</label></div></b></p><p><b><div class="input-container"><input type="password" id="password2" required=""/><label>powtórz hasło</label></div></b></p><div id="error" class="error"></div><p><button onclick="lpage()" class="button-3">zaloguj</button><button onclick="register()" class="button-3">zarejestruj</button></p>';
+  
+}
+function activationpage(mail) {
+  try {
+    var maili = document.getElementById("mail").value;
+  } catch {
+    var maili = mail
+  }
+  
+  space.innerHTML = '<p>podaj kod wysłany na adres email ('+maili+')</p><p>w przypadku odłączenia od serwera odśwież strone</p><p><b><div class="input-container"><input type="text" id="kod" required=""/><label>kod</label></div></b></p><p><div id="error" class="error"></div></p><p><button onclick="vmail()" class="button-3">zweryfikuj</button></p>'
+}
+function vmail() {
+  var kodi = document.getElementById("kod").value;
+  ws.send("ec:"+kodi);
 }
 function login() {
   var logini = document.getElementById("login").value;
@@ -105,17 +141,18 @@ function login() {
   ws.send("l:"+logini+":"+passwordi);
 }
 function register() {
-  if(logini.length>=5) {
-    if(passwordi.length>=8) {
-      //rejestracja
+  var logini = document.getElementById("login").value;
+  var passwordi = document.getElementById("password").value;
+  var password2i = document.getElementById("password2").value;
+  var maili = document.getElementById("mail").value;
 
-    } else {
-      lserror("zbyt krótkie hasło")
-    }
-    
-  }else{
-    lserror("zbyt krótki login")
-  }
+      if(passwordi==password2i) {
+        
+        var ms = "r:"+logini+":"+passwordi+":"+maili
+        ws.send(ms);
+      } else lserror("hasła muszą być takie same")
+      //rejestracja
+      
 }
 function lserror(lserror)  {
   document.getElementById("error").innerHTML = lserror
