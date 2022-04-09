@@ -5,6 +5,7 @@ const container = document.querySelector(".pojemnik")
 const coffees = [
   { name: "Moje kanały", image: "/obrazki/miniaturki/my_chanals.webp", link: "/podstrony/my_chanals.html" },
   { name: "Beta RPG", image: "/obrazki/miniaturki/rpg.webp", link: "/beta/index.html" },
+  { name: "PngLuk", image: "/obrazki/miniaturki/pngluk.webp", link: "https://luktvpl.github.io/PNGluk/" },
   { name: "Animowany Luk", image: "/obrazki/miniaturki/luk_kukła.webp", link: "/podstrony/luk_kukla.html" },
   { name: "Czarna lista", image: "/obrazki/miniaturki/black_list.webp", link: "/podstrony/black_list.html" }
 ]
