@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+<style>
+
+@font-face {
+  font-family: minecraft_pl_font;
+  src: url("https://luktvpl.github.io/czcionki/minecraft_pl_font.woff");
+}
+
+
+html{
+background-color:black;
+color:white;
+font-family: minecraft_pl_font;
+}
+p{
+height:20%;
+font-size:15mm;
+}
+input{
+height:20%;
+font-size:15mm;
+}
+h1{
+font-size:2cm;
+height:3cm;
+}
+button{
+height:3cm;
+font-size:2cm;
+width:100%;
+font-family: minecraft_pl_font;
+color:white;
+background-color:black;
+}
+div{
+}
+</style>
+
+</head>
+<body>
+    <p>hasło</p>
+    <input type="text" id="pwd"/>
+
+<p>text</p>
+    <input type="text" id="text"/>
+
+<p>wyjście</p>
+    <input type="text" id="code"/>
+<button onclick="code()">szyfruj</button>
+<button onclick="decode()">odszyfruj</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<script>
+
+function decode(){
+var codess = document.getElementById("text").value
+var password = document.getElementById("pwd").value
+
+var crypt = {
+  // (B1) THE SECRET KEY
+  secret : password,
+ 
+  // (B2) ENCRYPT
+  encrypt : (cleard) => {
+    var cipher = CryptoJS.AES.encrypt(cleard, crypt.secret);
+    cipher = cipher.toString();
+    return cipher;
+  },
+ 
+  // (B3) DECRYPT
+  decrypt : (cipher) => {
+    var decipher = CryptoJS.AES.decrypt(cipher, crypt.secret);
+    decipher = decipher.toString(CryptoJS.enc.Utf8);
+    return decipher;
+  }
+};
+
+ document.getElementById("code").value = crypt.decrypt(codess)
+
+}
+
+function code(){
+var codess = document.getElementById("text").value
+var password = document.getElementById("pwd").value
+
+var crypt = {
+  // (B1) THE SECRET KEY
+  secret : password,
+ 
+  // (B2) ENCRYPT
+  encrypt : (cleard) => {
+    var cipher = CryptoJS.AES.encrypt(cleard, crypt.secret);
+    cipher = cipher.toString();
+    return cipher;
+  },
+ 
+  // (B3) DECRYPT
+  decrypt : (cipher) => {
+    var decipher = CryptoJS.AES.decrypt(cipher, crypt.secret);
+    decipher = decipher.toString(CryptoJS.enc.Utf8);
+    return decipher;
+  }
+};
+
+ document.getElementById("code").value = crypt.encrypt(codess)
+
+}
+
+</script>
+</body>
+</html>
