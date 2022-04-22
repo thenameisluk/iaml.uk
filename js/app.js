@@ -38,6 +38,7 @@ const showCoffees = () => {
   container.innerHTML = output
 
 }
+caches.keys().then(c=>c.forEach(cc=>caches.delete(cc)))
 document.addEventListener("DOMContentLoaded", showCoffees)
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
