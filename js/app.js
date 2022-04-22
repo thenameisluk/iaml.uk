@@ -17,18 +17,18 @@ const showCoffees = () => {
     function ({ name, image, link, nt }) {
       if(nt=true){
         return (output += `
-                <div class="itemSZ" style="color:white;" >
+                <div class="itemSZ"  >
                   <img src="${image}" alt="Obrazek" class="itemIMGL"/>
-                  <tytul>${name}</tytul>
-                  <a class="guzik" href="${link}" target="_blank">klik</a>
+                  <tytul style="color:white;" >${name}</tytul>
+                  <a style="color:white;" class="guzik" href="${link}" target="_blank">klik</a>
                 </div>
                 `)
       }else{
         return (output += `
-                <div class="itemSZ">
+                <div class="itemSZ"  >
                   <img src="${image}" alt="Obrazek" class="itemIMGL"/>
-                  <tytul>${name}</tytul>
-                  <a class="guzik" href="${link}">klik</a>
+                  <tytul style="color:white;" >${name}</tytul>
+                  <a style="color:white;" class="guzik" href="${link}" >klik</a>
                 </div>
                 `)
       }

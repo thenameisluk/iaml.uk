@@ -101,6 +101,7 @@ p {
   margin: 5px;
 }
 .pojemnik {
+  color: white;
   display: grid;
   text-align: center;
   align-items: center;
@@ -161,6 +162,7 @@ p {
   font-size: 15px;
   width: 300px;
   height: 100px;
+  color: white;
   border-radius: 2px;
   margin: 3px;
 }
