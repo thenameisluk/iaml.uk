@@ -15,7 +15,7 @@ const showCoffees = () => {
   let output = ""
   coffees.forEach(
     function ({ name, image, link, nt }) {
-      if(nt=true){
+      if(nt==true){
         return (output += `
                 <div class="itemSZ"  >
                   <img src="${image}" alt="Obrazek" class="itemIMGL"/>
