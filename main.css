@@ -108,55 +108,7 @@ p {
   grid-template-columns: auto;
   justify-content: center;
 }
-.itemP {
-  background-color: rgb(218, 153, 34);
-  font-size: 15px;
-  width: 300px;
-  height: auto;
-  border-radius: 2px;
-  margin: 3px;
-}
-.itemZ {
-  background-color: rgb(26, 153, 26);
-  font-size: 15px;
-  width: 300px;
-  height: auto;
-  border-radius: 2px;
-  margin: 3px;
-}
-.itemJZ {
-  background-color: rgb(33, 236, 33);
-  font-size: 15px;
-  width: 300px;
-  height: auto;
-  border-radius: 2px;
-  margin: 3px;
-}
-.itemN {
-  background-color: rgb(23, 105, 143);
-  font-size: 15px;
-  width: 300px;
-  height: auto;
-  border-radius: 2px;
-  margin: 3px;
-}
-.itemC {
-  background-color: rgb(180, 50, 50);
-  font-size: 15px;
-  width: 300px;
-  height: auto;
-  border-radius: 2px;
-  margin: 3px;
-}
-.itemB {
-  background-color: rgb(224, 200, 200);
-  font-size: 15px;
-  width: 300px;
-  height: auto;
-  color: black;
-  border-radius: 2px;
-  margin: 3px;
-}
+
 .itemSZ {
   background-color: rgb(87, 86, 86);
   font-size: 15px;
