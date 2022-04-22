@@ -17,7 +17,7 @@ const showCoffees = () => {
     function ({ name, image, link, nt }) {
       if(nt=true){
         return (output += `
-                <div class="itemSZ">
+                <div class="itemSZ" style="color:white;" >
                   <img src="${image}" alt="Obrazek" class="itemIMGL"/>
                   <tytul>${name}</tytul>
                   <a class="guzik" href="${link}" target="_blank">klik</a>
