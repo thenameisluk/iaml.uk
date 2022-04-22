@@ -3,10 +3,10 @@
 
 const container = document.querySelector(".pojemnik")
 const coffees = [
-  { name: "Moje kanały", image: "/obrazki/miniaturki/my_chanals.webp", link: "/podstrony/my_chanals.html",nt:true },
+  { name: "Moje kanały", image: "/obrazki/miniaturki/my_chanals.webp", link: "/podstrony/my_chanals.html",nt:false },
   //{ name: "Beta RPG", image: "/obrazki/miniaturki/rpg.webp", link: "/beta/index.html",nt:false },
   { name: "Fox Team", image: "/obrazki/miniaturki/foxteam.webp", link: "/podstrony/foxteam.html",nt:false },
-  { name: "PngLuk", image: "/obrazki/miniaturki/pngluk.webp", link: "https://luktvpl.github.io/PNGluk/",nt:false },
+  { name: "PngLuk", image: "/obrazki/miniaturki/pngluk.webp", link: "https://luktvpl.github.io/PNGluk/",nt:true },
   { name: "Animowany Luk", image: "/obrazki/miniaturki/luk_kukła.webp", link: "/podstrony/luk_kukla.html",nt:false },
   { name: "Czarna lista", image: "/obrazki/miniaturki/black_list.webp", link: "/podstrony/black_list.html",nt:false }
 ]
