@@ -5,7 +5,7 @@
 /* podstawowe elementy*/
 html {
   background-color: black;
-  color: white;
+  color: #ffffff;
   margin: 0;
 }
 body {
@@ -14,12 +14,12 @@ body {
   font-size: 0.7cm;
 }
 tytul {
-  color: white;
+  color: #ffffff;
   font-size: 1cm;
 }
 a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 /*lisek góra */
 .imgL {
@@ -54,18 +54,18 @@ p {
   font-size: 0.7cm;
 }
 .fixA {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .fixAbc {
-  color: white;
+  color: #ffffff;
   margin: 1mm;
   text-decoration: none;
   font-size: 9mm;
 }
 .fixAb {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 30px;
 }
@@ -101,7 +101,7 @@ p {
   margin: 5px;
 }
 .pojemnik {
-  color: white;
+  color: #ffffff;
   display: grid;
   text-align: center;
   align-items: center;
@@ -114,7 +114,7 @@ p {
   font-size: 15px;
   width: 300px;
   height: 100px;
-  color: white;
+  color: #ffffff;
   border-radius: 2px;
   margin: 3px;
 }
@@ -135,7 +135,7 @@ p {
   margin: 0px;
 }
 .guzik {
-  color: white;
+  color: #ffffff;
   margin: 2mm;
   text-decoration: none;
   font-size: 1cm;
@@ -161,7 +161,7 @@ p {
   bottom: 0;
   width: 98%;
   background-color: rgb(53, 53, 53);
-  color: white;
+  color: #ffffff;
   text-align: center;
   height: 46px;
   border-radius: 10px;
@@ -197,7 +197,7 @@ p {
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: "minecraft_pl_font";
@@ -273,7 +273,6 @@ p {
   left: 0px;
   font-size: 16px;
   color: #fff;
-  pointer-event: none;
   transition: all 0.5s ease-in-out;
 }
 .input-container input {
