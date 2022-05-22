@@ -7,7 +7,7 @@ fetch('https://luktvpl.github.io/Dokumenty/Podstrony.json')
   .then(data => {
 const coffees = data.ps
 
-const showCoffees = () => {
+
   let output = ""
   coffees.forEach(
     function ({ name, image, link, nt }) {
@@ -33,7 +33,7 @@ const showCoffees = () => {
   )
   container.innerHTML = output
 
-}});
+});
 //caches.keys().then(c=>c.forEach(cc=>caches.delete(cc)))
 document.addEventListener("DOMContentLoaded", showCoffees)
 if ("serviceWorker" in navigator) {
