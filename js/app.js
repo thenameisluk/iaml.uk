@@ -5,7 +5,7 @@ const container = document.querySelector(".pojemnik")
 fetch('https://luktvpl.github.io/Dokumenty/Podstrony.json')
   .then(response => response.json())
   .then(data => {
-const coffees = data.ps
+const coffees = data
 
 
   let output = ""
