@@ -1,0 +1,110 @@
+@font-face {
+  font-family: minecraft_pl_font;
+  src: url("/czcionki/minecraft_pl_font.woff");
+}
+html{
+font-size: 1cm;
+z-index:1;
+font-family: minecraft_pl_font;
+background-color: black;
+color: #ffffff;
+margin: 0;
+}
+body{
+  font-family: minecraft_pl_font;
+}
+.topw{
+position:fixed;
+top:7.5%;
+left:7.5%;
+z-index:3;
+background-color: rgb(13, 13, 13);;
+color:white;
+width:85%;
+height:85%;
+}
+.x{
+position:fixed;
+height:5%;
+widows:5%;
+top:8.5%;
+left: 89.5%;
+}
+.stopka {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 98%;
+  margin: 0%;
+  background-color: rgb(53, 53, 53);
+  color: #ffffff;
+  text-align: center;
+  height: 1cm;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+.pojemnik {
+  color: #ffffff;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+.itemSZ {
+  background-color: rgb(87, 86, 86);
+  font-size: 15px;
+  width: 300px;
+  height: 100px;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 3px;
+}
+.itemIMGL {
+  width: 100px;
+  border-radius: 2px;
+  float: left;
+}
+
+.guzik {
+  color: #ffffff;
+  margin: 2mm;
+  text-decoration: none;
+  font-size: 1cm;
+  display: block;
+  background-color: rgb(48, 48, 48);
+  border-radius: 10px;
+  margin-left: 107px;
+}
+.glowka {
+  padding: 0.5cm;
+  text-align: center;
+  background: #3b3b3b;
+  color: rgb(255, 255, 255);
+  border-radius: 0.3cm;
+  margin: 1%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a4d52;
+  border: 2px solid #282a2d;
+  border-radius: 10px;
+}
