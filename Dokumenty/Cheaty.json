@@ -1,0 +1,51 @@
+{
+  "lvl3": [
+    {
+      "name": "NeroQ24",
+      "cheat": "nuker",
+      "client": "horion"
+    },
+    {
+      "name": "Marcelkal1",
+      "cheat": "item hack",
+      "client": "toolbox"
+    },
+    {
+      "name": "Wojann8580",
+      "cheat": "item hack",
+      "client": "toolbox"
+    },
+    {
+      "name": "xveru8787",
+      "cheat": "item hack",
+      "client": "toolbox"
+    },
+    {
+      "name": "SoaRKapi4029",
+      "cheat": "Server destroyer (nbt/cbe)",
+      "client": "horion"
+    }
+  ],
+  "lvl2": [
+    {
+      "name": "sewele",
+      "cheat": "item hack",
+      "client": "toolbox"
+    },
+    {
+      "name": "szafran600",
+      "cheat": "any",
+      "client": "horion"
+    }
+  ],
+  "lvl1": [
+    {
+      "name": "xIROxYTMC"
+    }
+  ],
+  "opis": {
+    "lvl3": "Napeweno cheatują",
+    "lvl2": "Mają dostęp do cheatów",
+    "lvl1": "Mają makro"
+  }
+}
