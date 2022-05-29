@@ -14,15 +14,7 @@ conten.style=""
 win.innerHTML = ""
 })
 }
-var process = 1;
-var size = 20
-setInterval(() => {
-    if(process==1)size+=1;
-    else size-=1;
-    if(size>25)process=0
-    if(size<20)process=1
-    mottol.style = "font-size:"+size+"px;"
-}, 128);
+
 function getinnersite(name){
 
 }

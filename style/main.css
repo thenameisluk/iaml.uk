@@ -86,6 +86,16 @@ widows: 7%;
   right: 20px;
   top: 15px;
   color: yellow;
+  animation-name: motto;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes motto{
+  0%{ font-size: 20px;}
+  40%{font-size: 30px;}
+  50%{font-size: 30px;}
+  90%{font-size: 20px;}
+  100%{font-size: 20px;}
 }
 .itemButton{
   background-color: #282a2d;
