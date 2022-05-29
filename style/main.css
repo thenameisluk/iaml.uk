@@ -24,11 +24,10 @@ width:85%;
 height:85%;
 }
 .x{
-position:fixed;
-height:5%;
-widows:5%;
-top:8.5%;
-left: 89.5%;
+float: right;
+margin: 5px;
+height:7%;
+widows: 7%;
 }
 .stopka {
   position: fixed;
