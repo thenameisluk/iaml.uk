@@ -43,6 +43,19 @@ left: 89.5%;
   border-radius: 10px;
   margin-bottom: 3px;
 }
+.icon{
+  height: 1cm;
+}
+.imgL{
+  height: 0.9cm;
+}
+.fixAbc {
+  color: #ffffff;
+  margin: 1mm;
+  text-decoration: none;
+  font-size: 15mm;
+  font-weight: 100;
+}
 .pojemnik {
   color: #ffffff;
   display: grid;
@@ -55,24 +68,32 @@ left: 89.5%;
 .itemSZ {
   background-color: rgb(87, 86, 86);
   font-size: 15px;
-  font-size: 1cm;
+  font-size: 0.8cm;
   width: 300px;
-  height: 110px;
+  height: 100px;
   color: #ffffff;
   border-radius: 5px;
   margin: 2px;
 }
 .itemIMGL {
-  width: 110px;
+  width: 100px;
   border-radius: 2px;
   float: left;
   display: block;
+}
+.motto{
+  position: absolute;
+  transform: rotate(10deg);
+  right: 20px;
+  top: 15px;
+  color: yellow;
 }
 .itemButton{
   background-color: #282a2d;
   border-radius: 6px;
   margin: 15px;
   display: block;
+  font-size: 1cm;
   float: right;
   width: 160px;
   text-align: center;

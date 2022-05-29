@@ -1,0 +1,11 @@
+{
+    "sites":[
+        {
+            "title":"czarne lista",
+            "img":"black_list.webp",
+            "content":"bl",
+            "scriptf":"black_list"
+        }
+
+    ]
+}
