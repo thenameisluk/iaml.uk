@@ -22,16 +22,67 @@ background-color: rgb(13, 13, 13);;
 color:white;
 width:85%;
 height:85%;
+overflow: scroll;
+}
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .x{
 float: right;
 margin: 5px;
 height:7%;
 widows: 7%;
+display: block;
+}
+.text{
+  margin: 1cm;
+  margin-top: 1cm;
+  float: left;
+  text-align: left;
+  display: block;
+  position: absolute;
+}
+.center{
+  text-align: center;
+}
+.ods {
+  margin: 4px;
+}
+.b {
+  font-weight: bold;
+  font-size: 1cm;
+  margin: 0px;
+}
+.ob {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.ss {
+  border-radius: 2px;
+  height: 140px;
+  width: 100px;
+  margin: 5px;
+}
+.itemIMG {
+  width: 80px;
+  border-radius: 2px;
+  margin: 0px;
+}
+.title{
+  float: left;
+  margin:5px;
+  margin-left: 10%;
+  position: absolute;
+  text-align: center;
+  display: block;
 }
 .stopka {
   position: fixed;
-  left: 0;
+  left: 1%;
   bottom: 0;
   width: 98%;
   margin: 0%;
@@ -54,6 +105,10 @@ widows: 7%;
   text-decoration: none;
   font-size: 15mm;
   font-weight: 100;
+}
+a{
+  color: #ffffff;
+  text-decoration: none;
 }
 .pojemnik {
   color: #ffffff;

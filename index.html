@@ -10,23 +10,18 @@
   <body>
     <div id="fullcon">
       <div class="glowka">
-        <img src="/obrazki/firmowe/luk XL.gif" alt="Luk" class="imgL" />
-        <a class="fixAbc" href="./account.html">Konto</a>
-        <a class="fixAbc" href="./podstrony/me.html">O mnie</a>
+        <img
+          src="/obrazki/firmowe/luk XL.gif"
+          alt="Luk"
+          class="imgL"
+          onclick="home()"
+        />
+        <a onclick="account()" class="fixAbc">Konto</a>
+        <a onclick="me()" class="fixAbc">O mnie</a>
       </div>
       <div class="motto" id="motto"></div>
       <div id="content">
-        <div class="pojemnik">
-          <div class="itemSZ">
-            <img
-              src="./obrazki/miniaturki/my_chanals.webp"
-              alt="nic"
-              class="itemIMGL"
-            />
-            przebudowa trwa
-            <p class="itemButton" onclick="test()">klik</p>
-          </div>
-        </div>
+        <div class="pojemnik" id="pojemnik"></div>
       </div>
       <div class="stopka">
         <a href="/podstrony/social.html">
@@ -52,4 +47,5 @@
     <div id="win"></div>
   </body>
   <script src="./js/app.js"></script>
+  <script src="./js/undersite_functions.js"></script>
 </html>
