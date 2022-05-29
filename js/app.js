@@ -1,5 +1,5 @@
 var cards = {};
-
+var log = true
 var conten = document.getElementById("fullcon")
 var win = document.getElementById("win")
 var okno = '<div class="topw">test <img src="./obrazki/ui/x.png" class="x" id="x"/> </div>'
@@ -29,3 +29,24 @@ function getinnersite(name){
 function getItem(imgName,Title,innersite){
 
 }
+//motto
+fetch("https://luktvpl.github.io/json/motta.json").then(r => r.json().then(m=>{
+    var mtu = m.m;
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = now - start;
+    var oneDay = 1000 * 60 * 60 * 24;
+    var day = Math.floor(diff / oneDay);
+    var use = day%mtu.length
+    clog(day);
+    clog(use);
+    clog(mtu.length)
+    mottol.innerHTML = mtu[use];
+}).catch(wtf=>console.log(wtf))).catch(wtf=>console.log(wtf))
+
+function clog(arg){
+    if(log==true)console.log(arg);
+}
+setTimeout(() => {
+    caches.keys().then(c=>c.forEach(cc=>caches.delete(cc)))
+}, 100);
