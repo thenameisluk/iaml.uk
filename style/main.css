@@ -22,6 +22,7 @@ background-color: rgb(13, 13, 13);;
 color:white;
 width:85%;
 height:85%;
+border-radius: 10px;
 overflow: scroll;
 -webkit-overflow-scrolling: touch;
 }
