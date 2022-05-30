@@ -13,6 +13,10 @@ margin: 0;
 body{
   font-family: minecraft_pl_font;
 }
+.inv{
+color: transparent;
+margin:10px;
+}
 .topw{
 position:fixed;
 top:7.5%;
