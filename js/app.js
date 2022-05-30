@@ -9,6 +9,7 @@ var blure ="-webkit-filter: blur(5px);-moz-filter: blur(5px);-o-filter: blur(5px
 var mottol = document.getElementById("motto")
 function innpage(inl){
     win.innerHTML = okno;
+    conten.style = blure;
     fetch("./json/usData/"+inl+".json").then(r=>r.json().then(j=>{
         win.innerHTML = getwoindow(j.title,j.content)
         try{
