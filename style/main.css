@@ -23,6 +23,7 @@ color:white;
 width:85%;
 height:85%;
 overflow: scroll;
+-webkit-overflow-scrolling: touch;
 }
 p{
   margin-top: 0px;
