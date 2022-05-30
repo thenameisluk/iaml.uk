@@ -5,7 +5,7 @@ var incon = document.getElementById("content")
 var pojem = document.getElementsByClassName("pojemnik")
 var win = document.getElementById("win")
 var okno = '<div class="topw"><div class="title"></div><img src="./obrazki/ui/x.png" class="x" id="x"/><div class="text"></div></div>'
-var blure ="-webkit-filter: blur(5px);-moz-filter: blur(5px);-o-filter: blur(5px);-ms-filter: blur(5px);filter: blur(5px);"
+var blure ="-webkit-filter: blur(5px);-moz-filter: blur(5px);-o-filter: blur(5px);-ms-filter: blur(5px);filter: blur(5px);overflow: hidden;"
 var mottol = document.getElementById("motto")
 function innpage(inl){
     win.innerHTML = okno;
