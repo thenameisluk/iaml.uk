@@ -8,3 +8,24 @@ function black_list(){
         document.getElementById("black_list").innerHTML = ou;
     }))
 }
+function hack(){
+    var bl = document.getElementById("hack")
+    fetch("./json/data/Cheaty.json").then(r=>r.json().then(j=>{
+        var ou = ""
+        ou +="<p>"+j.opis.lvl3+"</p>"
+        j.lvl3.forEach(che =>{
+            ou += "<p>-"+che.name+"-"+che.cheat+"-"+che.client+"</p>"
+        })
+        bl.innerHTML = ou;
+        ou +="<p>"+j.opis.lvl2+"</p>"
+        j.lvl2.forEach(che =>{
+            ou += "<p>-"+che.name+"-"+che.cheat+"-"+che.client+"</p>"
+        })
+        bl.innerHTML = ou;
+        ou +="<p>"+j.opis.lvl1+"</p>"
+        j.lvl1.forEach(che =>{
+            ou += "<p>-"+che.name+"</p>"
+        })
+        bl.innerHTML = ou;
+    }))
+}
