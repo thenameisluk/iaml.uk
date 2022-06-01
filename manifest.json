@@ -3,7 +3,7 @@
   "short_name": "luk",
   "theme_color": "#00",
   "background_color": "#000",
-  "display": "browser",
+  "display": "fullscreen",
   "orientation": "",
   "scope": "/",
   "start_url": "/",
