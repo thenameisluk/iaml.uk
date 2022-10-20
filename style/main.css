@@ -2,212 +2,34 @@
   font-family: minecraft_pl_font;
   src: url("/czcionki/minecraft_pl_font.woff");
 }
-html{
+body{
 font-size: 1cm;
 z-index:1;
 font-family: minecraft_pl_font;
-background-color: black;
+background-color: rgb(31, 31, 31);
 color: #ffffff;
-margin: 0;
 }
-body{
-  font-family: minecraft_pl_font;
-}
-.inv{
-color: transparent;
-margin:10px;
-}
-.topw{
-position:fixed;
-top:7.5%;
-left:7.5%;
-z-index:4;
-background-color: rgb(13, 13, 13);;
-color:white;
-width:85%;
-height:85%;
-padding:0;
-border-radius: 10px;
-overflow: auto;
--webkit-overflow-scrolling: touch;
+.pp{
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 25%;
 }
 p{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.x{
-float: right;
-margin: 5px;
-height:7%;
-widows: 7%;
-display: block;
-}
-.text{
-  margin: 1cm;
-  margin-top: 1cm;
-  float: left;
-  text-align: left;
-  display: block;
-  position: absolute;
-}
-.center{
-  text-align: center;
-}
-.ods {
-  margin: 4px;
-}
-.b {
-  font-weight: bold;
-  font-size: 1cm;
-  margin: 0px;
-}
-.ob {
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 0px;
-  justify-content: center;
-  align-items: center;
-}
-.ss {
-  border-radius: 2px;
-  height: 140px;
-  width: 100px;
-  margin: 5px;
-}
-.itemIMG {
-  width: 80px;
-  border-radius: 2px;
-  margin: 0px;
-}
-.title{
-  float: left;
-  margin:5px;
-  margin-left: 10%;
-  position: absolute;
-  text-align: center;
-  display: block;
-}
-.stopka {
-  position: fixed;
-  left: 1%;
-  bottom: 0;
-  width: 98%;
-  margin: 0%;
-  background-color: rgb(53, 53, 53);
-  color: #ffffff;
-  z-index:1;
-  text-align: center;
-  height: 1cm;
-  border-radius: 10px;
-  margin-bottom: 3px;
-}
-.icon{
-  height: 1cm;
-}
-.imgL{
-  height: 0.9cm;
-}
-.fixAbc {
-  color: #ffffff;
-  margin: 1mm;
-  text-decoration: none;
-  font-size: 15mm;
-  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 80%;
 }
 a{
-  color: #ffffff;
-  text-decoration: none;
+  color: white;
 }
-.pojemnik {
-  color: #ffffff;
-  display: grid;
-  text-align: center;
-  align-items: center;
-  grid-template-columns: auto;
+txt{
   justify-content: center;
-}
-
-.itemSZ {
-  background-color: rgb(87, 86, 86);
-  font-size: 15px;
-  font-size: 0.8cm;
-  width: 300px;
-  height: 100px;
-  color: #ffffff;
-  border-radius: 5px;
-  margin: 2px;
-}
-.itemIMGL {
-  width: 100px;
-  border-radius: 2px;
-  float: left;
-  display: block;
-}
-.motto{
-  position: absolute;
-  transform: rotate(10deg);
-  right: 20px;
-  top: 15px;
-  color: yellow;
-  animation-name: motto;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-@keyframes motto{
-  0%{ font-size: 20px;}
-  40%{font-size: 30px;}
-  50%{font-size: 30px;}
-  90%{font-size: 20px;}
-  100%{font-size: 20px;}
-}
-.itemButton{
-  background-color: #282a2d;
-  border-radius: 6px;
-  margin: 15px;
-  display: block;
-  font-size: 1cm;
-  float: right;
-  width: 160px;
   text-align: center;
-}
-.guzik {
-  color: #ffffff;
-  margin: 2mm;
-  text-decoration: none;
-  font-size: 1cm;
   display: block;
-  background-color: rgb(48, 48, 48);
-  border-radius: 10px;
-  margin-left: 107px;
 }
-.glowka {
-  padding: 0.5cm;
-  text-align: center;
-  background: #3b3b3b;
-  color: rgb(255, 255, 255);
-  border-radius: 0.3cm;
-  margin: 1%;
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-/* scroll bar */
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-button {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #4a4d52;
-  border: 2px solid #282a2d;
-  border-radius: 10px;
+.container{
+  margin-left: 10%;
+  margin-right: 10%;
 }
