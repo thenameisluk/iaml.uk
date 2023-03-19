@@ -1,5 +1,7 @@
 typper(document.getElementById("hello"),["hej jestem luk"])
+typper(document.getElementById("hellow"),["luk'a głupie projekty"])
 function typper(element,input = [""]){
+    if(element==undefined)return;
     var letter = 0;
     var doc = 0;
     tp("")
