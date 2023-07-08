@@ -1,28 +1,226 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link rel="stylesheet" href="./style/main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <div class="container">
-      <img src="./obrazki/pfp.png" class="pp" alt="luk">
-      <txt id="hello" class="hello"></txt>
-      <txt>
-        <p>-🧩 stworzyłem : <a href="./projekty.html">projekty</a></p>
-        <p>-🕹️ gram w : Pokemon Unite</p>
-        <p>-⌨️ znam : JavaScript i C++</p>
-        <p>-❤️ lubię : programować i rysować</p>
-        <p>-🎟️ yt : <a href="https://www.youtube.com/@LukJestem" target="_blank">luk</a> i <a href="https://www.youtube.com/@LukProgramuje" target="_blank">luk dev</a></p>
-        <p>-🌐 discord : luk#3380</p>
-        <p>-💻 github : <a href="https://github.com/luktvpl" target="_blank">tu</a></p>
-        <p>-☕ kawa : <a href="https://www.buymeacoffee.com/luktvpl" target="_blank">tu</a></p>
-        <p>css nie jest moją mocną stroną</p>
-      </txt>
-    </div>
-  </body>
-  <script src="./script.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="./style/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style id="jit">
+  </style>
+</head>
+
+<body>
+  <img id="pfp" class="pp" alt="luk">
+  <div class="pushbot">
+    <en>
+      <typer>hi I'm Luk</typer>
+    </en>
+    <pl>
+      <typer>hej jestem luk</typer>
+    </pl>
+  </div>
+  <nav class="pushbot">
+    <btn onclick="load(0)">
+      <pl>o mnie</pl>
+      <en>about me</en>
+    </btn>
+    <btn onclick="load(1)">
+      <pl>projekty</pl>
+      <en>projects</en>
+    </btn>
+    <btn onclick="load(2)">
+      <pl>kontak</pl>
+      <en>contact</en>
+    </btn>
+    <btn onclick="load(3)">
+      <pl>kody</pl>
+      <en>codes</en>
+    </btn>
+  </nav>
+  <txt>
+    <p1>
+      <pl>
+        <wraparound>
+          <p class="pushbot">Witaj na mojej osobistej stronie internetowej! Nazywam się Luk i jestem entuzjastą
+            programowania, miłośnikiem
+            Pokemonów, graczem (głównie Pokemon Unite i czasem Minecraft) oraz lubie rysowanie.
+          </p>
+          <p class="pushbot">Moje zainteresowania skupiają się między innymi wokół programowania. Posiadam umiejętności
+            w językach
+            programowania takich jak C++ oraz JavaScript, wraz z obsługą HTML i trochą CSS. Mam również doświadczenie w
+            korzystaniu z narzędzi takich jak DaVinci Resolve i GIMP.
+          </p>
+          <p class="pushbot">Obecnie nie pracuję zawodowo, jednak moją przyszłość wiążę z dziedziną informatyki.
+            Chciałbym rozwijać się
+            jako programista i znaleźć zajęcie związanę z IT.
+          </p>
+        </wraparound>
+      </pl>
+      <en>
+        <wraparound>
+          <p class="pushbot">
+            Welcome to my personal website! My name is Luk, and I'm a programming enthusiast, Pokemon lover, gamer
+            (mainly Pokemon Unite and occasionally Minecraft), and I enjoy drawing.
+          </p>
+          <p class="pushbot">
+            My interests revolve around programming, among other things. I have skills in programming languages such as
+            C++ and JavaScript, along with HTML handling and a bit of CSS. I also have experience using tools like
+            DaVinci Resolve and GIMP.
+          </p>
+          <p class="pushbot">
+            Currently, I'm not working professionally, but I see my future in the field of computer science. I would
+            like to further develop as a programmer and find an IT-related occupation.
+          </p>
+        </wraparound>
+      </en>
+    </p1>
+    <p2>
+      <div class="pushbot">
+        <pr1>
+          <wraparound>
+            <p class="biggel">dsl</p>
+            <img src="./obrazki/proj/dsl.png" alt="dsl" class="tumb">
+            <text-fitter class="pushbot">
+              <pl>
+                nie udokumentowana biblioteka nagłówkowa w języku C++ pozwalająca na między innymi tworzenie okien w
+                systemie windows or linux czy też zapisywanie danych bezpośrednio do plików
+              </pl>
+              <en>
+                not documented in C++ header-only library that allows you to for example create window in windows or
+                linux or save raw data directly to files
+              </en>
+            </text-fitter>
+            <img src="./obrazki/proLang/c++.png" alt="c++" class="icon">
+            <p><a href="https://github.com/lukishere/dsl" target="_blank" class="pushbot">
+                <pl>kod źródłowy</pl>
+                <en>source code</en>
+              </a></p>
+          </wraparound>
+        </pr1>
+        <pr2>
+          <p class="biggel">DarkOs</p>
+          <img src="./obrazki/proj/do.png" alt="dsl" class="tumb">
+          <text-fitter class="pushbot">
+            <pl>
+              niedokończony projek system operacyjnego w przeglądarce z systemem okien
+            </pl>
+            <en>
+              closed project system operating system in web borwser with window system
+            </en>
+          </text-fitter>
+          <img src="./obrazki/proLang/js.png" alt="js" class="icon">
+          <p><a href="https://dark-os.duckdns.org/" target="_blank" class="pushbot">
+              <pl>wypróbuj</pl>
+              <en>try it out</en>
+            </a></p>
+          <p><a href="https://github.com/lukishere/DarkOS" target="_blank" class="pushbot">
+              <pl>kod źródłowy</pl>
+              <en>source code</en>
+            </a></p>
+        </pr2>
+        <pr3>
+          <p class="biggel">
+            <pl>graWzycie</pl>
+            <en>gameOfLife</en>
+          </p>
+          <img src="./obrazki/proj/gwz.png" alt="gwz" class="tumb">
+          <text-fitter class="pushbot">
+            <pl>
+              prosta implementacja gry w życie Conwey'a w C++, wyżystująca api systemów windows(win32) oraz linux(x11)
+            </pl>
+            <en>
+              simple implementation of Conway's game of life, using default systems api windows(win32) and linux(x11)
+            </en>
+          </text-fitter>
+          <img src="./obrazki/proLang/c++.png" alt="c++" class="icon">
+          <p><a href="https://github.com/LukIsHere/graWzycie/releases/tag/1.0.1" target="_blank" class="pushbot">
+              <pl>wypróbuj</pl>
+              <en>try it out</en>
+            </a></p>
+          <p><a href="https://github.com/lukishere/graWzycie" target="_blank" class="pushbot">
+              <pl>kod źródłowy</pl>
+              <en>source code</en>
+            </a></p>
+        </pr3>
+        <pr4>
+          <p class="biggel">Skill issue</p>
+          <img src="./obrazki/proj/si.png" alt="si" class="tumb">
+          <text-fitter class="pushbot">
+            <pl>
+              prosta strona stworzona dla żartów na prośbę kolegi
+            </pl>
+            <en>
+              simple website created for fun, cause friend asked for it
+            </en>
+          </text-fitter>
+          <img src="./obrazki/proLang/js.png" alt="js" class="icon">
+          <p><a href="https://lukishere.github.io/Skill-Issue/" target="_blank" class="pushbot">
+              <pl>wypróbuj</pl>
+              <en>try it out</en>
+            </a></p>
+          <p><a href="https://github.com/lukishere/Skill-Issue" target="_blank" class="pushbot">
+              <pl>kod źródłowy</pl>
+              <en>source code</en>
+            </a></p>
+        </pr4>
+      </div>
+      <p>
+      <nav class="pushbot">
+        <btn onclick="prevProj()">
+          <pl>poprzedni</pl>
+          <en>previous</en>
+        </btn>
+        <btn onclick="nextProj()">
+          <pl>następny</pl>
+          <en>next</en>
+        </btn>
+      </nav>
+      </p>
+    </p2>
+    <p3>
+      <pl>
+        <wraparound>
+          <p>discord : lukistaken</p>
+          <p>github : lukishere</p>
+          <p class="pushbot">nic poza tym</p>
+        </wraparound>
+      </pl>
+      <en>
+        <wraparound>
+          <p>discord : lukistaken</p>
+          <p>github : lukishere</p>
+          <p class="pushbot">nothing else</p>
+        </wraparound>
+      </en>
+    </p3>
+    <p4>
+      <p class="biggel">
+        <pl>
+          kod
+        </pl>
+        <en>
+          code
+        </en>
+      </p>
+      <input type="text" id="code" class="input-box" onchange="tryLoadSecret()">
+      <p class="smaller">name or sth</p>
+      <wraparound id="secret" class="pushbot">
+      </wraparound>
+    </p4>
+    <p>
+      <pl>css nie jest moją mocną stroną, chyba</pl>
+      <en>css isn't my strengh, i guess</en>
+    </p>
+    <p>
+      <a onclick="toggleLang()">
+        <pl>switch languages</pl>
+        <en>przełącz język</en>
+      </a>
+    </p>
+  </txt>
+</body>
+<script src="./script.js"></script>
+
 </html>
