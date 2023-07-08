@@ -164,7 +164,7 @@ function worngCode(){
 
 }
 function tryLoadSecret(){
-    var code = document.getElementById("code").value;
+    var code = document.getElementById("code").value.toLowerCase();
     if(secret[xorHash(code)]==undefined||code==""){
         worngCode()
         return;
