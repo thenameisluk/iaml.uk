@@ -99,6 +99,7 @@ function dayOfYear(){
 //var pfps = ["./obrazki/pfpA.png", "./obrazki/pfpB.png"];
 //document.getElementById("pfp").src = pfps[dayOfYear()%pfps.length];
 
+
 var warnin = false
 function updateUrl(){
     if(window.history.replaceState){
@@ -132,7 +133,6 @@ function code(){
     else
         out.innerHTML = xorFlip(ppl[hash],code)
 }
-
 function encodeX(text,key){
     return ('"'+xorHash(key)+'":"'+xorFlip(text,key)+'"')
 }
