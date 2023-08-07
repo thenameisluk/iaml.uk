@@ -1,145 +1,143 @@
 @font-face {
-    font-family: minecraft_pl_font;
-    src: url("/czcionki/minecraft_pl_font.woff");
+    font-family: clean;
+    src: url("/czcionki/Lovelo-Black.woff2");
+}
+
+:root {
+    --font-color:#fff;
+    --background-color:#0E0E0E;
+    --border-color: #232323;
+    --frontground-color:#202020;
 }
 
 body {
-    font-size: 0.8cm;
+    /* font-size: 20cm; */
     z-index: 1;
-    font-family: minecraft_pl_font;
-    background-color: rgb(15, 15, 15);
-    color: #ffffff;
-}
-
-.pp {
-    border-radius: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 5cm;
-}
-
-.spp {
-    border-radius: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10mm;
-    display: block;
-    width: 3cm;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 80%;
+    font-family: clean;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 a {
-    color: white;
-    text-decoration: underline;
+    color: var(--font-color);
+    text-decoration: none;
 }
 
-txt {
-    justify-content: center;
-    text-align: center;
+p{
+    margin-top: 0mm;
+    margin-bottom: 2mm;
+}
+
+sws{
+    display: block;
+    margin-top: 2mm;
+    margin-bottom: 2mm;
+    word-spacing:1cm;
+}
+
+ywy{
+    display: flex;
+    justify-content: space-between;
+}
+
+.larrow{
+    float: left;
+}
+.rarrow{
+    float: right;
+}
+.larrow,.rarrow{
+    width: 10%;
+    height: 10%;
+    margin:auto;
+}
+
+.img50{
+    width: 50%;
+    margin-bottom: 0mm;
     display: block;
 }
 
-typer {
-    justify-content: center;
-    text-align: center;
+.img40{
+    width: 40%;
+    margin-bottom: 0mm;
     display: block;
-}
-
-.container {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-btn {
-    user-select: none;
-    color: #ffffff;
-    margin-left: 1mm;
-    margin-right: 1mm;
-    border-radius: 3mm;
-    border-color: #2b2b2b;
-    border-width: 1mm;
-    border-style: solid;
-    background-color: #2b2b2b;
-    text-align: center;
-    white-space: nowrap;
-
-}
-
-nav {
-    display: grid;
-    grid-auto-flow: column;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 20cm;
-}
-
-red {
-    color: red;
-}
-
-.tumb {
-    width: calc(100% - 2cm);
-    max-width: 10cm;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.icon {
-    width: 1cm;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-btn:hover {
-    border-color: #1b1b1b;
-    background-color: #1b1b1b;
-}
-
-wraparound {
-    display: inline-block;
-    max-width: 18cm;
-    height: 1.5em;
-    text-overflow: ellipsis;
-}
-
-.pushbot {
-    margin-bottom: 10mm;
-}
-
-.biggel {
-    font-size: 1.5cm;
-}
-
-.smaller {
-    font-size: 0.5cm;
-}
-
-text-fitter {
-    display: block;
-    max-width: 15cm;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .input-box {
     display: block;
+    margin-top: 2mm;
+    margin-bottom: 2mm;
     margin-left: auto;
     margin-right: auto;
     height: 1cm;
     width: 4cm;
-    background-color: #1b1b1b;
-    border-color: white;
+    background-color: var(--frontground-color);
+    border-color: var(--font-color);
     font-size: 1cm;
-    font-family: minecraft_pl_font;
+    font-family: clean;
+    outline: none;
     border: solid;
     border-radius: 2mm;
-    color: white;
+    color: var(--font-color);
 }
+
+.title{
+    font-size: 1cm;
+}
+
+xwx{
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+    display: block;
+    background-color: var(--frontground-color);
+    height: 2.6cm;
+}
+
+
+
+.logo{
+    position: relative;
+    margin-top: 3mm;
+    margin-left: 3mm;
+    left: 5vw;
+    width: 2cm;
+}
+
+twt{
+    font-size: 1cm;
+}
+
+uwu{
+    overflow:hidden;
+    font-size: 0.7cm;
+    display: block;
+    background-color: var(--border-color);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2mm;
+    text-align: center;
+}
+
+owo{
+    font-size: 1.2cm;
+    width: 100%;
+    display: block;
+    margin-top: 1cm;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media (orientation: landscape) {/*h<w*/
+    uwu{
+        width: 80vh;
+    }
+  }
+  
+  @media (orientation: portrait) {/*h>w*/
+    uwu{
+        width: 90vw;
+    }
+  }
