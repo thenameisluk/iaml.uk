@@ -40,6 +40,19 @@ ywy{
     justify-content: space-between;
 }
 
+.board{
+    display: block;
+    text-align:center;
+    position: relative;
+    aspect-ratio: 3/2;
+    width: 100%;
+}
+
+.pin{
+    position: absolute;
+    width: 5%;
+}
+
 .larrow{
     float: left;
 }
