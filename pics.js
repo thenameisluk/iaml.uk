@@ -12,13 +12,13 @@ function prevPic(){
     picA.classList = "img40"
     picB.classList = "img40h"
 
-    picB.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
+    picA.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
     
     pic--;
     if(pic<0)
         pic=pics-1;
 
-    picA.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
+    picB.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
 
     picA.classList.toggle("img40away")
     picB.classList.toggle("img40in")
@@ -40,13 +40,13 @@ function nextPic(){
     picA.classList = "img40"
     picB.classList = "img40h"
 
-    picB.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
+    picA.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
     
     pic++;
     if(pic==pics)
         pic=0;
 
-    picA.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
+    picB.setAttribute("src","./obrazki/pkmgo/"+pic+".jpg")
 
     picA.classList.toggle("img40away")
     picB.classList.toggle("img40in")
