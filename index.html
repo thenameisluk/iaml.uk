@@ -22,32 +22,39 @@
     </owo>
     <uwu>
       <lwl class="board">
-        <p>who am i? hm ...</p>
-        <p>i'll put sth diffrent here later.</p>
-        <p>but for now, i know JS, TS and CPP</p>
-        <p>like to play pkm go and unite</p>
+        <img src="./obrazki/icons/progLang.png" alt="">
+        <p>Hoi, the name is luk</p>
+        <p>'m from poland <img src="./obrazki/icons/pl.png" class="emoji"></p>
+        <p>but can speak English</p>
+        <p>can code in</p>
+        <p>
+          <img src="./obrazki/icons/js.png" class="emoji">
+          <img src="./obrazki/icons/ts.png" class="emoji">
+          <img src="./obrazki/icons/c++.png" class="emoji">
+        </p>
       </lwl>
     </uwu>
     <owo>
       projects
     </owo>
-    <uwu>
-      <lwl class="title">dark os</lwl>
+    <uwu class="sec-proj">
+      <lwl class="title" id="proj-title">dark os</lwl>
       <ywy>
-        <img src="./obrazki/ui/arrowLeft.png" class="larrow" onclick="nextProj()">
-        <img src="./obrazki/proj/do.png" class="img50" loading="lazy">
-        <img src="./obrazki/ui/arrowRight.png" class="rarrow">
+        <img src="./obrazki/ui/arrowLeft.png" class="larrow" onclick="prevProj()">
+        <img src="./obrazki/proj/do.png" id="proj-img" class="img50" loading="lazy">
+        <img src="./obrazki/ui/arrowRight.png" class="rarrow" onclick="nextProj()">
       </ywy>
-      <a href="./index.html">more</a>
+      <a href="./index.html" id="proj-link">more</a>
     </uwu>
     <owo>
       pics
     </owo>
     <uwu>
       <ywy>
-        <img src="./obrazki/ui/arrowLeft.png" class="larrow">
-        <img src="./obrazki/pkmgo/0.jpg" class="img40" loading="lazy">
-        <img src="./obrazki/ui/arrowRight.png" class="rarrow">
+        <img src="./obrazki/ui/arrowLeft.png" class="larrow" onclick="prevPic()">
+        <img src="./obrazki/pkmgo/0.jpg" class="img40" loading="lazy" id="picA">
+        <img src="./obrazki/pkmgo/0.jpg" class="img40h" loading="lazy" id="picB">
+        <img src="./obrazki/ui/arrowRight.png" class="rarrow" onclick="nextPic()">
       </ywy>
     </uwu>
     <owo>
@@ -73,4 +80,5 @@
 </body>
 <script src="./script.js"></script>
 <script src="./projects.js"></script>
+<script src="./pics.js"></script>
 </html>

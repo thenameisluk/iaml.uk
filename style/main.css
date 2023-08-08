@@ -46,6 +46,7 @@ ywy{
     position: relative;
     aspect-ratio: 3/2;
     width: 100%;
+    font-size: 1cm;
 }
 
 .pin{
@@ -66,15 +67,48 @@ ywy{
 }
 
 .img50{
+    aspect-ratio: 1/1;
     width: 50%;
     margin-bottom: 0mm;
     display: block;
 }
 
+@keyframes picIn{
+    from{width: 0%;}
+    to{width: 40%;}
+}
+@keyframes picOut{
+    form{width: 40%;}
+    to{width: 0%;}
+}
 .img40{
-    width: 40%;
-    margin-bottom: 0mm;
+    margin: 0mm;
     display: block;
+    width: 40%;
+}
+.img40h{
+    margin: 0mm;
+    display: block;
+    width: 0%;
+}
+.img40in{
+    margin: 0mm;
+    display: block;
+    animation-name: picIn;
+    animation-duration: 300ms;
+}
+.img40away{
+    margin: 0mm;
+    display: block;
+    animation-name: picOut;
+    animation-duration: 300ms;
+}
+
+.emoji{
+    vertical-align: middle;
+    height: 1cm;
+    position: relative;
+    top: -0.2cm;
 }
 
 .input-box {
@@ -104,6 +138,7 @@ xwx{
     top: 0;
     left: 0; */
     display: block;
+    width: 100%;
     background-color: var(--frontground-color);
     height: 2.6cm;
 }
