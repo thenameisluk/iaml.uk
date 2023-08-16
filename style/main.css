@@ -44,7 +44,7 @@ ywy{
     display: block;
     text-align:center;
     position: relative;
-    aspect-ratio: 3/2;
+    /*aspect-ratio: 3/2;*/
     width: 100%;
     font-size: 1cm;
 }
@@ -106,9 +106,11 @@ ywy{
 
 .emoji{
     vertical-align: middle;
-    height: 1cm;
+    height: 0.8cm;
     position: relative;
-    top: -0.2cm;
+    top: -0.1cm;
+    margin-left: 1mm;
+    margin-right: 1mm;
 }
 
 .input-box {
