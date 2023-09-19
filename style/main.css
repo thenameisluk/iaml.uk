@@ -1,7 +1,8 @@
 @font-face {
     font-family: clean;
-    src: url("/czcionki/Lovelo-Black.woff2");
-}
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
 
 :root {
     --font-color:#fff;
@@ -13,9 +14,15 @@
 body {
     /* font-size: 20cm; */
     z-index: 1;
-    font-family: clean;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--background-color);
     color: var(--font-color);
+}
+
+.pfp{
+    margin: 3mm;
+    width: 3cm;
+    border-radius: 2mm;
 }
 
 a {
@@ -28,6 +35,10 @@ p{
     margin-bottom: 2mm;
 }
 
+hwh{
+    font-size: 70%
+}
+
 sws{
     display: block;
     margin-top: 2mm;
@@ -35,82 +46,33 @@ sws{
     word-spacing:1cm;
 }
 
-ywy{
-    display: flex;
-    justify-content: space-between;
-}
-
-.board{
-    display: block;
-    text-align:center;
-    position: relative;
-    /*aspect-ratio: 3/2;*/
-    width: 100%;
-    font-size: 1cm;
-}
-
-.pin{
+jwj{
     position: absolute;
-    width: 5%;
-}
-
-.larrow{
-    float: left;
-}
-.rarrow{
-    float: right;
-}
-.larrow,.rarrow{
-    width: 10%;
-    height: 10%;
-    margin:auto;
-}
-
-.img50{
-    aspect-ratio: 1/1;
-    width: 40%;
-    margin-bottom: 0mm;
-    display: block;
-}
-
-@keyframes picIn{
-    from{width: 0%;}
-    to{width: 40%;}
-}
-@keyframes picOut{
-    form{width: 40%;}
-    to{width: 0%;}
-}
-.img40{
-    margin: 0mm;
-    display: block;
-    width: 40%;
-}
-.img40h{
-    margin: 0mm;
-    display: block;
-    width: 0%;
-}
-.img40in{
-    margin: 0mm;
-    display: block;
-    animation-name: picIn;
-    animation-duration: 300ms;
-}
-.img40away{
-    margin: 0mm;
-    display: block;
-    animation-name: picOut;
-    animation-duration: 300ms;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .emoji{
     vertical-align: middle;
-    height: 0.8cm;
+    height: 0.9cm;
     position: relative;
     top: -0.1cm;
     margin-left: 1mm;
     margin-right: 1mm;
+}
+
+.im{
+    width: 22%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: width 0.2s, height 0.2s;
+}
+
+.im:hover{
+    width: 30%;
 }
 
 .input-box {
@@ -171,8 +133,9 @@ uwu{
     background-color: var(--border-color);
     margin-left: auto;
     margin-right: auto;
-    border-radius: 2mm;
+    border-radius: 4mm;
     text-align: center;
+    margin-bottom: 5mm;
 }
 
 owo{
@@ -187,7 +150,7 @@ owo{
 
 @media (orientation: landscape) {/*h<w*/
     uwu{
-        width: 80vh;
+        width: 60vh;
     }
   }
   
