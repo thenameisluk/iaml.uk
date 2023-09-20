@@ -17,7 +17,7 @@ var projects = [
     {
         title:"Skill Issue",
         image:"si.png",
-        url:"https://github.com/LukIsHere/Skill-Issue"
+        url:"https://lukishere.dev/Skill-Issue/"
     }
 ]
 
