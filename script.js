@@ -136,3 +136,10 @@ function code(){
 function encodeX(text,key){
     return ('"'+xorHash(key)+'":"'+xorFlip(text,key)+'"')
 }
+
+function show(){
+    document.querySelector("ywy").classList.add("show")
+}
+function hide(){
+    document.querySelector("ywy").classList.remove("show")
+}

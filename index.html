@@ -20,26 +20,36 @@
 
 <body>
   <!-- yo why u even look here? I mean it's nice u r interested but imo .js files are more interestin -->
-  <xwx><img src="./obrazki/logoA.png" alt="luk" class="logo"></xwx>
+  <!-- <xwx><img src="./obrazki/logoA.png" alt="luk" class="logo"></xwx> -->
   <twt>
     <uwu>
       <lwl>
         <img src="./obrazki/pfp.png" class="pfp">
         <p>I'm luk</p>
         <hwh>
-        <p>but Who am I<img src="https://cdn.discordapp.com/emojis/1036363552761589930.gif" class="emoji">?</p>
+        <p>but Who am I<img src="https://cdn.discordapp.com/emojis/1036363552761589930.gif" class="emoji"
+          onmouseover="show()"
+          onmouseout="hide()"
+          >
+          <ywy>
+            <jwj>Love u LgD ❤️</jwj>
+          </ywy>
+          
+          
+          ?
+        </p>
       </hwh>
       </lwl>
     </uwu>
-    <uwu>
-      <p>Projects</p>
-      <p id="proj">...</p>
-      <div style="aspect-ratio: 3/1; display: flex; justify-content: center;">
-        <img src="./obrazki/proj/do.png" class="im">
-        <img src="./obrazki/proj/gwz.png" class="im">
-        <img src="./obrazki/proj/dsl.png" class="im">
-        <img src="./obrazki/proj/si.png" class="im">
+    <uwu class="projsc" id="projsc">
+      <p><a id="proj">...</a></p>
+      <div id="projs" style="aspect-ratio: 3/1; display: flex; justify-content: center;">
+        <img src="./obrazki/proj/do.png" class="im" onmouseover="load(0)">
+        <img src="./obrazki/proj/dsl.png" class="im" onmouseover="load(1)">
+        <img src="./obrazki/proj/gwz.png" class="im" onmouseover="load(2)">
+        <img src="./obrazki/proj/si.png" class="im" onmouseover="load(3)">
       </div>
+      <p><a id="proj-link">Link</a></p>
     </uwu>
     <uwu>
       <zwz>
@@ -52,9 +62,7 @@
     </uwu>
     
   </twt>
-  <jwj>
-    Love u LgD ❤️
-  </jwj>
 </body>
 <script src="./script.js"></script>
+<script src="./projects.js"></script>
 </html>

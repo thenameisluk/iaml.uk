@@ -14,15 +14,9 @@
 body {
     /* font-size: 20cm; */
     z-index: 1;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: clean,-apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--background-color);
     color: var(--font-color);
-}
-
-.pfp{
-    margin: 3mm;
-    width: 3cm;
-    border-radius: 2mm;
 }
 
 a {
@@ -35,10 +29,6 @@ p{
     margin-bottom: 2mm;
 }
 
-hwh{
-    font-size: 70%
-}
-
 sws{
     display: block;
     margin-top: 2mm;
@@ -46,20 +36,8 @@ sws{
     word-spacing:1cm;
 }
 
-jwj{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.emoji{
-    vertical-align: middle;
-    height: 0.9cm;
-    position: relative;
-    top: -0.1cm;
-    margin-left: 1mm;
-    margin-right: 1mm;
+hwh{
+    font-size: 70%;
 }
 
 .im{
@@ -68,10 +46,10 @@ jwj{
     margin-bottom: auto;
     margin-top: auto;
     margin-bottom: auto;
-    transition: width 0.2s, height 0.2s;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
 }
 
-.im:hover{
+.im.hover{
     width: 30%;
 }
 
@@ -107,8 +85,6 @@ xwx{
     height: 2.6cm;
 }
 
-
-
 .logo{
     position: relative;
     margin-top: 3mm;
@@ -119,16 +95,15 @@ xwx{
 
 twt{
     position: absolute;
-    top: 3cm;
+    /* top: 3cm; */
     left: 0;
     display: block;
     width: 100%;
-    font-size: 1cm;
 }
 
 uwu{
+    position: relative;
     overflow:hidden;
-    font-size: 0.7cm;
     display: block;
     background-color: var(--border-color);
     margin-left: auto;
@@ -139,7 +114,6 @@ uwu{
 }
 
 owo{
-    font-size: 1.2cm;
     width: 100%;
     display: block;
     margin-top: 1cm;
@@ -149,13 +123,72 @@ owo{
 }
 
 @media (orientation: landscape) {/*h<w*/
+    body{
+        font-size: 3vh;
+    }
     uwu{
         width: 60vh;
+    }
+    .pfp{
+        margin: 3vh;
+        width: 20vh;
+        border-radius: 2vh;
+    }
+    .emoji{
+        vertical-align: middle;
+        height: 3vh;
+        position: relative;
+        top: -0.3vh;
+        margin-left: 0.2vh;
+        margin-right: 0.2vh;
     }
   }
   
   @media (orientation: portrait) {/*h>w*/
+    body{
+        font-size: 5vw;
+    }
     uwu{
         width: 90vw;
     }
+    .pfp{
+        margin: 4.5vw;
+        width: 30vw;
+        border-radius: 4.5vw;
+    }
+    .emoji{
+        vertical-align: middle;
+        height: 4.5vh;
+        position: relative;
+        top: -0.45vh;
+        margin-left: 0.3vh;
+        margin-right: 0.3vh;
+    }
   }
+
+.projsc{
+    aspect-ratio: 18/7;
+    transition: aspect-ratio 0.2s ease-out;
+}
+.projsc.hover{
+    aspect-ratio: 18/9;
+}
+
+ywy{
+    opacity: 0%;
+    transition: opacity 0.5s ease-out;
+}
+.show{
+    opacity: 100%;
+}
+
+jwj{
+    position: absolute;
+    display: block;
+    top: 76%;
+    left: 59%;
+    color: black;
+    background-color: white;
+    border-radius: 1mm;
+    font-size: 90%;
+}
