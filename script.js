@@ -82,6 +82,13 @@ if(args.lang==undefined){
 }
 
 function jitCSS(){
+    var jit_css = ""
+    languages.forEach(l=>{
+        if(l!=args.lang){
+            jit_css += l+"{\ndisplay: none;\n}\n"
+        }
+    })
+    document.getElementById("jit").innerHTML = jit_css;
     updateUrl()
 }
 
@@ -143,3 +150,5 @@ function show(){
 function hide(){
     document.querySelector("ywy").classList.remove("show")
 }
+
+jitCSS();
