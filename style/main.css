@@ -187,10 +187,15 @@ ywy{
 jwj{
     position: absolute;
     display: block;
-    top: 67%;
-    left: 55%;
+    top: -90%;
+    left: 70%;
+    white-space: nowrap;
     color: black;
     background-color: white;
     border-radius: 1mm;
     font-size: 90%;
+}
+
+rwr{
+    position: relative;
 }
