@@ -37,7 +37,8 @@ var facts = [
     "ppl say 'm trust worth, i don't trust myself, the heck is wrong with them?",
     "u can get to know me better by refreshin this site",
     "i don't have favorite type of music",
-    "undefined"
+    "undefined",
+    "'m from Poland🇵🇱"
 ]
 
 document.getElementById("fact").innerHTML = random(facts)
