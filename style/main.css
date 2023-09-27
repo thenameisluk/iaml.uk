@@ -4,12 +4,19 @@
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
   }
 
-:root {
+/* :root {
     --font-color:#fff;
     --background-color:#0E0E0E;
+    --shadow:#000000;
     --border-color: #232323;
-    --frontground-color:#202020;
-}
+} */
+
+/* :root {
+    --font-color:#000000;
+    --background-color:#cce3e7;
+    --shadow:#0e6a75;
+    --border-color: #6fbce1;
+} */
 
 body {
     /* font-size: 20cm; */
@@ -112,7 +119,7 @@ uwu{
     text-align: center;
     margin-bottom: 5mm;
     /* shadow */
-    box-shadow: 0px 10px 0px 0px rgb(10, 10, 10);
+    box-shadow: 0px 10px 0px 0px var(--shadow);
 }
 
 owo{
@@ -198,4 +205,15 @@ jwj{
 
 rwr{
     position: relative;
+}
+
+ojo{
+    position: absolute;
+    top: 3mm;
+    left: 0;
+}
+
+.switch{
+    display: block;
+    width: 5vw;
 }
