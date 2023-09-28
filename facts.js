@@ -30,7 +30,7 @@ var facts = [
     "do u play minecraft?",
     "i like reinventing the wheel",
     "'m kinda blue accordin to 'surrounded by idiots', cool book btw",
-    "ask ur local umbreon for huggy for FREE!!!",
+    "ask ur local umbreon/glaceon for virtual huggy for FREE!!!",
     "i forgo my dreams (don't think i had any), LgD is my priority",
 	"i want to have IT related job",
     "'m still an amateur or have impostor syndrome",
