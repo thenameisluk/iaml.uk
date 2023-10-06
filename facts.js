@@ -31,7 +31,7 @@ var facts = [
     "i like reinventing the wheel",
     "'m kinda blue accordin to 'surrounded by idiots', cool book btw",
     "ask ur local umbreon for huggy for FREE!!!",
-    "i forgo my dreams (don't think i had any), LgD is my priority",
+    "i forgo my dreams (don't think i had any), LgD was my priority",
 	"i want to have IT related job",
     "'m still an amateur or have impostor syndrome",
     "ppl say 'm trust worth, i don't trust myself, the heck is wrong with them?",
