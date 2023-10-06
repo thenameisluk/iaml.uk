@@ -81,8 +81,35 @@ if(args.lang==undefined){
     reffreshArgs()
 }
 
+var mode = {
+    dark:":root {--font-color:#fff;--background-color:#0E0E0E;--shadow:#000000;--border-color: #232323;}",
+    light:":root {--font-color:#000000;--background-color:#cce3e7;--shadow:#0e6a75;--border-color: #6fbce1;}"
+}
+
+var modes = Object.keys(mode)
+
+if(!modes.includes(args.mode)){
+    args.mode = modes[0]
+    reffreshArgs()
+}
+
+function lights(){
+    if(args.mode=="dark")args.mode="light"
+    else args.mode="dark"
+    console.log(args.mode)
+    jitCSS()
+}
+
 function jitCSS(){
     var jit_css = ""
+    //light
+    jit_css += mode[args.mode];
+    if(args.mode=="dark"){
+        document.getElementById("switch").setAttribute("src","./obrazki/light_switch.png")
+    }else{
+        document.getElementById("switch").setAttribute("src","./obrazki/light_switchB.png")
+    }
+    //language
     languages.forEach(l=>{
         if(l!=args.lang){
             jit_css += l+"{\ndisplay: none;\n}\n"

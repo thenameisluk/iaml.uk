@@ -30,14 +30,20 @@ var facts = [
     "do u play minecraft?",
     "i like reinventing the wheel",
     "'m kinda blue accordin to 'surrounded by idiots', cool book btw",
+<<<<<<< HEAD
     "ask ur local umbreon for huggy for FREE!!!",
     "i forgo my dreams (don't think i had any), LgD was my priority",
+=======
+    "ask ur local umbreon/glaceon for virtual huggy for FREE!!!",
+    "i forgo my dreams (don't think i had any), LgD is my priority",
+>>>>>>> 0db4d46bfa2fe5662e5584881164d9fc20392fd0
 	"i want to have IT related job",
     "'m still an amateur or have impostor syndrome",
     "ppl say 'm trust worth, i don't trust myself, the heck is wrong with them?",
     "u can get to know me better by refreshin this site",
     "i don't have favorite type of music",
-    "undefined"
+    "undefined",
+    "'m from Poland🇵🇱"
 ]
 
 document.getElementById("fact").innerHTML = random(facts)
