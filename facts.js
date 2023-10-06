@@ -29,14 +29,9 @@ var facts = [
     "we have facts.lenght facts so far",
     "do u play minecraft?",
     "i like reinventing the wheel",
-    "'m kinda blue accordin to 'surrounded by idiots', cool book btw",
-<<<<<<< HEAD
+    "'m kinda blue accordin to \"surrounded by idiots\", cool book btw",
     "ask ur local umbreon for huggy for FREE!!!",
     "i forgo my dreams (don't think i had any), LgD was my priority",
-=======
-    "ask ur local umbreon/glaceon for virtual huggy for FREE!!!",
-    "i forgo my dreams (don't think i had any), LgD is my priority",
->>>>>>> 0db4d46bfa2fe5662e5584881164d9fc20392fd0
 	"i want to have IT related job",
     "'m still an amateur or have impostor syndrome",
     "ppl say 'm trust worth, i don't trust myself, the heck is wrong with them?",

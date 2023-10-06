@@ -206,8 +206,8 @@ jwj{
 rwr{
     position: relative;
 }
+:root {--font-color:#fff;--background-color:#0E0E0E;--shadow:#000000;--border-color: #232323;}
 
-<<<<<<< HEAD
 lwl{
     display: block;
     margin-top: 7%;
@@ -216,15 +216,4 @@ lwl{
 awa{
     font-weight: bold;
     font-size: 170%;
-=======
-ojo{
-    position: absolute;
-    top: 3mm;
-    left: 0;
-}
-
-.switch{
-    display: block;
-    width: 5vw;
->>>>>>> 0db4d46bfa2fe5662e5584881164d9fc20392fd0
 }

@@ -93,22 +93,8 @@ if(!modes.includes(args.mode)){
     reffreshArgs()
 }
 
-function lights(){
-    if(args.mode=="dark")args.mode="light"
-    else args.mode="dark"
-    console.log(args.mode)
-    jitCSS()
-}
-
 function jitCSS(){
     var jit_css = ""
-    //light
-    jit_css += mode[args.mode];
-    if(args.mode=="dark"){
-        document.getElementById("switch").setAttribute("src","./obrazki/light_switch.png")
-    }else{
-        document.getElementById("switch").setAttribute("src","./obrazki/light_switchB.png")
-    }
     //language
     languages.forEach(l=>{
         if(l!=args.lang){
