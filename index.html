@@ -1,93 +1,118 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link rel="stylesheet" href="./style/main.css" />
-    <meta property="og:title" content="LuK" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="lukishere.dev" />
-    <meta
-      property="og:image"
-      content="http://lukishere.dev/obrazki/logoA.png"
-    />
-    <meta property="og:description" content="..." />
-    <meta name="theme-color" content="#FFFF00" />
-    <link rel="shortcut icon" href="./obrazki/favB.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style id="jit"></style>
-  </head>
-
-  <body>
-    <!-- yo why u even look here? I mean it's nice u r interested but imo .js files are more interestin -->
-    <!-- <xwx><img src="./obrazki/logoA.png" alt="luk" class="logo"></xwx> -->
-    <twt>
-      <uwu>
-        <lwl>
-          <!--<img src="./obrazki/pfp.png" class="pfp" />-->
-          <p><awa>I'm luk</awa>
-          		<rwr>
-          			<img
-                	src="https://cdn.discordapp.com/emojis/1036363552761589930.gif"
-                	class="emoji show"
-                	onmouseover="show()"
-                	onmouseout="hide()"
-            	 	/>
-              	<ywy>
-                	<jwj>Hi❤️</jwj>
-              	</ywy>
-              </rwr>
-            </p>
-              <hwh>
-                <p id="fact"></p>
-              </hwh>
-        </lwl>
-      </uwu>
-      <uwu class="projsc" id="projsc">
-        <p><a id="proj">...</a></p>
-        <div
-          id="projs"
-          style="aspect-ratio: 3/1; display: flex; justify-content: center"
-        >
-          <img src="./obrazki/proj/do.png" class="im" onmouseover="load(0)" />
-          <img src="./obrazki/proj/dsl.png" class="im" onmouseover="load(1)" />
-          <img src="./obrazki/proj/gwz.png" class="im" onmouseover="load(2)" />
-          <img src="./obrazki/proj/si.png" class="im" onmouseover="load(3)" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luk</title>
+    <link rel="stylesheet" href="./style/styles.css">
+    <style>
+        .wide{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            max-width: 17cm;
+            margin-top: 3mm;
+            text-align: center;
+            align-items: center;
+        }
+        .center{
+            align-self: center;
+        }
+        .auto-margin{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card-image{
+            width: 3cm;
+            margin-top: 1mm;
+            border-radius: 2mm;
+        }
+        .flex{
+            justify-content: center;
+            display: flex;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .block{
+            display: block;
+        }
+        .avatar{
+            width: 5cm; border-radius: 7mm;
+        }
+        .nodecoration{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="box linked vertical dark-theme">
+    <span class="header">website being remade (again) most links don't work for now</span>
+    <div class="card wide">
+        <p><img src="./obrazki/logo.webp" class="card avatar"></p>
+        <span class="header">I am Luk</span>
+        <p class="text" id="fact"></p>
+    </div>
+    <div class="card wide">
+        <span class="header">Projects</span>
+        <p></p>
+        <div class="flex auto-margin">
+            <a href="https://github.com/LukIsHere/DarkOS" target="_blank" class="flex column">
+                <img src="./obrazki/proj/do.png" class="center card-image">
+                <span class="label">Dark Os</span>
+            </a>
+            <span class="separator vertical"></span>
+            <a href="https://github.com/LukIsHere/dsl" target="_blank" class="flex column">
+                <img src="./obrazki/proj/dsl.png" class="center card-image">
+                <span class="label">DSL</span>
+            </a>
+            <span class="separator vertical"></span>
+            <a href="https://github.com/LukIsHere/graWzycie" target="_blank" class="flex column">
+                <img src="./obrazki/proj/gwz.png" class="center card-image">
+                <span class="label">Gra w Zycie</span>
+            </a>
         </div>
-        <p><a id="proj-link">Link</a></p>
-      </uwu>
-      <uwu>
-        <p>I know</p>
-        <hwh>
-        <p>
-        	<img src="./obrazki/js.png" class="emoji">
-        	<img src="./obrazki/ts.png" class="emoji">
-          <img src="./obrazki/c++.png" class="emoji">
-        </p>
-        <p>will code for money/fun :</p>
-        <p>- website</p>
-        <p>- browser game</p>
-        <p>- discord bot (can also host)</p>
-        </hwh>
-        <p>details? contact me</p>
-      </uwu>
-      <uwu>
-        <canvas id="screen" height="512" width="512" style="display:block;width: 100%; aspect-ratio: 1/1;"></canvas>
-      </uwu>
-      <uwu>
-        <zwz>
-          <sws>
-            <a href="https://twitter.com/lukistaken" target="_blank">X</a>
-            <a href="mailto:business@lukishere.dev">E-mail</a>
-            <a href="https://discord.gg/PwmVfK94zc" target="_blank">Discord</a>
-          </sws>
-        </zwz>
-      </uwu>
-    </twt>
-  </body>
-  <script src="./script.js"></script>
-  <script src="./projects.js"></script>
-  <script src="https://lukishere.dev/Pet-Scriptable/html.js"></script>
-  <script src="./facts.js"></script>
+        </div>
+    </div>
+    <div class="card wide">
+        <span class="header">My choices</span>
+        <div class="flex column">
+            <p></p>
+            <div class="flex column">
+                <span class="label">langueges</span>
+                <span><span class="message success">C++, JS, TS,</span><span class="message alert"> Java</span></span>
+            </div>
+            <span class="separator"></span>
+            <div class="flex column">
+                <span class="label">Programs</span>
+                <span>VSCode, Gimp </span>
+            </div>
+            <span class="separator"></span>
+            <div class="flex column">
+                <span class="label">Play</span>
+                <span>Terraria, BG3, ...</span>
+            </div>
+            <span class="separator"></span>
+            <div class="flex column">
+                <span class="label">Series</span>
+                <span>The Big Bang Theory, Infinity Train</span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="card wide">
+        <span class="header">Blog</span>
+        <p>comming soon or never</p>
+        <button class="btn text">more</button>
+    </div> -->
+    <!-- <div class="card wide">
+        <span class="header">Will code for money</span>
+    </div> -->
+    <div class="card linked flex wide">
+            <button class="btn text" onfocus="this.innerHTML = 'thenameisluk'" onfocusout="this.innerHTML='Discord'">Discord</button>
+            <button class="btn text" onclick="window.open('https:\/\/github.com/LukIsHere/','_blank')" >Github</a></button>
+            <button class="btn text" onclick="window.open('mailto:contact@lukishere.dev')">Mail</button>
+            <button class="btn text" onclick="window.open('https:\/\/twitter.com/lukistaken')">X</button>
+    </div>
+    <span class="subtitle center">css used : <a href="https://github.com/ncpa0/ADWaveCSS/tree/master" target="_blank">here</a></span>
+    <script src="./facts.js"></script>
+</body>
 </html>
