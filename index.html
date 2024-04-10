@@ -49,7 +49,7 @@
             transition: all 400ms;
             display: block;
         }
-        *:hover>.sup{
+        .yo>.sup{
             opacity: 1;
             transition: all 400ms;
             height: 5mm;
@@ -72,7 +72,7 @@
             opacity: 0;
             transition: opacity 300ms;
         }
-        *:hover>.bubble{
+        .yo>.bubble{
             display: block;
             opacity: 1;
         }
@@ -82,7 +82,7 @@
     <!-- <span class="header">website being remade (again) most links don't work for now</span> -->
     <div class="card wide">
         <p class="relative">
-            <img src="./obrazki/logo.webp" class="card avatar">
+            <img onclick="sup(this.parentElement)" src="./obrazki/logo.webp" class="card avatar">
             <span class="absolute bubble">sup my friend :3</span>
         </p>
         <span class="header">I am Luk</span>
@@ -113,9 +113,13 @@
         <span class="header">My choices</span>
         <div class="flex column">
             <p></p>
-            <div class="flex column">
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column">
                 <span class="label">langueges</span>
-                <span><span class="message success">C++, JS, TS,</span><span class="message alert"> Java,</span><span class="message error"> Vala, Rust</span>
+                <span>
+                    <span class="message success">C++, JS, TS,</span>
+                    <span class="message alert"> Java,</span>
+                    <span class="message error"> Vala, Rust</span>
+                </span>
                 <span class="sup">
                     <span class="message success">know and use</span>
                     <span class="message alert"> is ok</span>
@@ -123,7 +127,7 @@
                 </span>
             </div>
             <span class="separator"></span>
-            <div class="flex column">
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column">
                 <span class="label">Programs</span>
                 <span>VSCode, Gimp, Aseprite</span>
                 <span class="sup">
@@ -160,12 +164,13 @@
         </div>
     </div>
     <div class="card linked flex wide">
-            <button class="btn text" onfocus="this.innerHTML = 'thenameisluk'" onfocusout="this.innerHTML='Discord'">Discord</button>
+            <button class="btn text" onclick="this.innerHTML = 'thenameisluk'== this.innerHTML ? 'Discord' : 'thenameisluk'">Discord</button>
             <button class="btn text" onclick="window.open('https:\/\/github.com/LukIsHere/','_blank')" >Github</a></button>
             <button class="btn text" onclick="window.open('mailto:contact@lukishere.dev')">Mail</button>
             <button class="btn text" onclick="window.open('https:\/\/twitter.com/lukistaken')">X</button>
     </div>
     <span class="subtitle center">css used : <a href="https://github.com/ncpa0/ADWaveCSS/tree/master" target="_blank">here</a></span>
     <script src="./facts.js"></script>
+    <script src="./sup.js"></script>
 </body>
 </html>
