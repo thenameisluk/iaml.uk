@@ -43,12 +43,48 @@
         .nodecoration{
             text-decoration: none;
         }
+        .sup{
+            opacity: 0;
+            height: 0;
+            transition: all 400ms;
+            display: block;
+        }
+        *:hover>.sup{
+            opacity: 1;
+            transition: all 400ms;
+            height: 5mm;
+            display: block;
+        }
+        .relative{
+            position: relative;
+        }
+        .absolute{
+            position: absolute;
+        }
+        .bubble{
+            display: block;
+            color: black;
+            padding: 1mm;
+            background-color: white;
+            top: 0;
+            left: 60%;
+            border-radius: 2mm;
+            opacity: 0;
+            transition: opacity 300ms;
+        }
+        *:hover>.bubble{
+            display: block;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="box linked vertical dark-theme">
-    <span class="header">website being remade (again) most links don't work for now</span>
+    <!-- <span class="header">website being remade (again) most links don't work for now</span> -->
     <div class="card wide">
-        <p><img src="./obrazki/logo.webp" class="card avatar"></p>
+        <p class="relative">
+            <img src="./obrazki/logo.webp" class="card avatar">
+            <span class="absolute bubble">sup my friend :3</span>
+        </p>
         <span class="header">I am Luk</span>
         <p class="text" id="fact"></p>
     </div>
@@ -79,17 +115,25 @@
             <p></p>
             <div class="flex column">
                 <span class="label">langueges</span>
-                <span><span class="message success">C++, JS, TS,</span><span class="message alert"> Java</span></span>
+                <span><span class="message success">C++, JS, TS,</span><span class="message alert"> Java,</span><span class="message error"> Vala, Rust</span>
+                <span class="sup">
+                    <span class="message success">know and use</span>
+                    <span class="message alert"> is ok</span>
+                    <span class="message error"> learning</span>
+                </span>
             </div>
             <span class="separator"></span>
             <div class="flex column">
                 <span class="label">Programs</span>
-                <span>VSCode, Gimp </span>
+                <span>VSCode, Gimp, Aseprite</span>
+                <span class="sup">
+                    running linux Debian Testing with GNOME
+                </span>
             </div>
             <span class="separator"></span>
             <div class="flex column">
                 <span class="label">Play</span>
-                <span>Terraria, BG3, ...</span>
+                <span>Terraria, BG3, Cat Mario, ...</span>
             </div>
             <span class="separator"></span>
             <div class="flex column">
@@ -103,9 +147,18 @@
         <p>comming soon or never</p>
         <button class="btn text">more</button>
     </div> -->
-    <!-- <div class="card wide">
+    <div class="card wide">
         <span class="header">Will code for money</span>
-    </div> -->
+        <div class="flex">
+            <span class="text">websites</span>
+            <span class="separator vertical"></span>
+            <span class="text">webgames</span>
+            <span class="separator vertical"></span>
+            <span class="text">games</span>
+            <span class="separator vertical"></span>
+            <span class="text">discord bots</span>
+        </div>
+    </div>
     <div class="card linked flex wide">
             <button class="btn text" onfocus="this.innerHTML = 'thenameisluk'" onfocusout="this.innerHTML='Discord'">Discord</button>
             <button class="btn text" onclick="window.open('https:\/\/github.com/LukIsHere/','_blank')" >Github</a></button>
