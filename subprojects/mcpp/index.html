@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>mcpp</title>
+<link rel="icon" type="image/png" href="./logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mcpp-bot.duckdns.org">
+<meta property="og:title" content="mcpp">
+<meta property="og:description" content="minecraft + discord bot">
+<meta property="og:image" content="https://mcpp-bot.duckdns.org/mc.gif">
+</head>
+<body>
+<canvas id="canvas" class="bg"></canvas>
+<div class="cont">
+    <main>
+        <div class="mair">
+            <div><img src="./logo.png" class="botAvatar" style="margin-top: 20px;" alt=""></div>
+            <div class="title">
+                mcpp (discontinued)
+            </div>
+            <p><a href="/blog/0/">Bot history</a></p>
+            <p class="btn" style="margin-bottom: 20px; width: 7cm;margin: auto;"><a target="_blank" style="text-decoration: none;" href="./add" target="_blank">dodaj bota</a></p>
+        </div>
+        <div class="i1">
+            <img class="icon selected" id="i1t" onclick="sele(0)" src="./list.png" alt="">
+        </div>
+        <div class="i2">
+            <img class="icon" id="i2t" onclick="sele(1)" src="./stock.png" alt="">
+        </div>
+        <div class="i3">
+            <img class="icon" id="i3t" onclick="sele(2)" src="./seed.png" alt="">
+        </div>
+        <div class="i4">
+            <img class="icon" id="i4t" onclick="sele(3)" src="./more.png" alt="">
+        </div>
+        <div class="rest">
+            <div class="rankingGrid" id="rankG">
+                <div class="title" style="margin-bottom: 20px;" id="rankT">Ranking</div>
+                <div class="ows" id="owI">
+                    <img class="iconb selected" id="ows" src="./ow.png" onclick="sow()" alt="">
+                </div>
+                <div class="nts" id="ntI">
+                    <img class="iconb" id="nts" src="./nt.png" onclick="snt()" alt="">
+                </div>
+                <div id="ow" class="rank"></div>
+                <div id="nt" class="rank hide"></div>
+            </div>
+            <div class="stockGrid" id="stockG">
+                <div class="title">stock (soon)</div>
+                <img src="./ore/coal.png" onclick="drawStock(0)" alt="" class="icon it1" id="it1">
+                <img src="./ore/copper.png" onclick="drawStock(1)" alt="" class="icon it2" id="it2">
+                <img src="./ore/gold.png" onclick="drawStock(2)" alt="" class="icon it3" id="it3">
+                <img src="./ore/iron.png" onclick="drawStock(3)" alt="" class="icon it4" id="it4">
+                <img src="./ore/quartz.png" onclick="drawStock(4)" alt="" class="icon it5" id="it5">
+                <img src="./ore/lapis.png" onclick="drawStock(5)" alt="" class="icon it6" id="it6">
+                <img src="./ore/redstone.png" onclick="drawStock(6)" alt="" class="icon it7" id="it7">
+                <img src="./ore/diamond.png" onclick="drawStock(7)" alt="" class="icon it8" id="it8">
+                <img src="./ore/emerald.png" onclick="drawStock(8)" alt="" class="icon it9" id="it9">
+                <img src="./ore/netherite.png" onclick="drawStock(9)" alt="" class="icon it10" id="it10">
+                <canvas class="rest stockcnv" height="200" width="320" id="stockC"></canvas>
+            </div>
+            <div class="worldGrid hide" id="world">
+                <div class="title">seed</div>
+                <div class="ows" id="owI">
+                    <img class="iconb selected" id="oww" src="./ow.png" onclick="rw(0)" alt="">
+                </div>
+                <div class="nts" id="ntI">
+                    <img class="iconb" id="ntw" src="./nt.png" onclick="rw(1)" alt="">
+                </div>
+                <input type="number" class="seed" name="seed" id="seed" value="1">
+                <canvas class="stockcnv world" ondblclick="tstW()" id="w1" style="width: 70%;justify-self: center;" height="3072" width="1024"></canvas>
+            </div>
+            <div class="moreGrid" id="moreG">
+                <img class="i1 icon" id="i1m" onclick="sa()" src="./more/autor.png" alt="">
+                <img class="i2 icon" id="i2m" onclick="sc()" src="./more/core.png" alt="">
+                <img class="i3 icon" id="i3m" onclick="st()" src="./more/tos.png" alt="">
+                <img class="i4 icon" id="i4m" onclick="so()" src="./more/about.png" alt="">
+                <div class="content" id="author">
+                    <p>author</p>
+                    <div style="width: 80%; margin: auto;">
+                        <img src="https://cdn.discordapp.com/avatars/537649475494215690/f08bb4ee803936d3ceb23961018d86cf.png?size=1024" style="display: block; border-radius: 100%;margin: auto;border: 5px white solid;" alt="">
+                        It's me luk (thenameisluk). I'm so lonely and bored. I sometimes fight with my own demons. I don't trust people. I'm introvert(i guess). English is not my native language. I have dislection(can't do ortography). I like to code in C++ and JS. Also if you want to support me <a href="https://www.buymeacoffee.com/luktvpl">buy me a coffe</a>.
+                    </div>
+                </div>
+                <div class="content" id="engin">
+                    <p>engin</p>
+                    <div style="display: block;"><a target="_blank" href="https://github.com/luktvpl/mcpp">Bot</a> writen in c++ uses libs:</div>
+                    <div style="display: block;">- <a target="_blank" href="https://github.com/luktvpl/jpp">DPP</a> : discord library (c++)</div>
+                    <div style="display: block;">- <a target="_blank" href="https://github.com/luktvpl/jpp">J PP</a> : database</div>
+                    <div style="display: block;">- <a target="_blank" href="https://github.com/yhirose/cpp-httplib">cpp-httplib</a> : https client</div>
+                    <p></p>
+                    <div style="display: block;">This site uses <a target="_blank" href="./mcppEngin.js">mcppEnginJS</a> for generating seed preview</div>
+                </div>
+                <div class="content" id="tos">
+                    <p>tos</p>
+                    <div style="display: block;">1. bot is storing users discord id, avatar and nickname public in database</div>
+                    <div style="display: block;">2. you can use code of the bot if you credit me propertly</div>
+                    <div style="display: block;">3. if you will try to overload the bot you might be banned form using bot</div>
+                    <p></p>
+                    <div style="display: block;">maybe later i will add more</div>
+                </div>
+                <div class="content" id="about">
+                    <div style="display: block; font-size: 80%; margin: 10%;margin-bottom: 0%;">about</div>
+                    <div style="display: block; font-size: 60%; margin: 10%;margin-top: 0%;">bot allows you to mine in minecraft like 2d world to gather resources, earn its currency, compet with other in the race for points and more.</div>
+                    <div style="display: block; font-size: 60%; margin: 10%;margin-top: 0%;">if you wan to check what's planed to be add <a target="_blank" href="https://trello.com/b/VPzrHzTD/minecrafter">trello</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <p></p>
+    <a target="_blank" href="https://discord.com/invite/BshSWFYMmg" style="font-size: 40%;">test bot</a>
+    <mini>wabsite and bot made by team mcpp 2022 aka. luk</mini>
+    <mini>This bot is not affiliated with the game Minecraft, Mojang AB or Microsoft.</mini>
+    <p></p>
+    
+    
+</div>
+<!-- <script src="./bg.js"></script> -->
+<script src="./main.js"></script>
+<script src="./mcppEngin.js"></script>
+</body>
+</html>
