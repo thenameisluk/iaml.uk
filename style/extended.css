@@ -24,8 +24,18 @@
     margin-right: auto;
     width: 50%;
 }
+.limit > *:nth-child(3) ~ *{
+    display: none;
+}
+.limit > .limit-end{
+    display: none;
+}
 .float-left{
     float: left;
+}
+.image{
+    width: 90%;
+    border-radius: 1mm;
 }
 .float-right{
     float: right;
