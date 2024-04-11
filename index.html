@@ -5,78 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luk</title>
     <link rel="stylesheet" href="./style/styles.css">
-    <style>
-        .wide{
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            max-width: 17cm;
-            margin-top: 3mm;
-            text-align: center;
-            align-items: center;
-        }
-        .center{
-            align-self: center;
-        }
-        .auto-margin{
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .card-image{
-            width: 3cm;
-            margin-top: 1mm;
-            border-radius: 2mm;
-        }
-        .flex{
-            justify-content: center;
-            display: flex;
-        }
-        .column{
-            flex-direction: column;
-        }
-        .block{
-            display: block;
-        }
-        .avatar{
-            width: 5cm; border-radius: 7mm;
-        }
-        .nodecoration{
-            text-decoration: none;
-        }
-        .sup{
-            opacity: 0;
-            height: 0;
-            transition: all 400ms;
-            display: block;
-        }
-        .yo>.sup{
-            opacity: 1;
-            transition: all 400ms;
-            height: 5mm;
-            display: block;
-        }
-        .relative{
-            position: relative;
-        }
-        .absolute{
-            position: absolute;
-        }
-        .bubble{
-            display: block;
-            color: black;
-            padding: 1mm;
-            background-color: white;
-            top: 0;
-            left: 60%;
-            border-radius: 2mm;
-            opacity: 0;
-            transition: opacity 300ms;
-        }
-        .yo>.bubble{
-            display: block;
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="./style/extended.css">
 </head>
 <body class="box linked vertical dark-theme">
     <!-- <span class="header">website being remade (again) most links don't work for now</span> -->
@@ -107,7 +36,13 @@
                 <span class="label">Gra w Zycie</span>
             </a>
         </div>
+        <div class="flex auto-margin">
+            <a href="./subprojects/minecraft-er-site/" target="_blank" class="flex column">
+                <img src="./obrazki/proj/mcpp.png" class="center card-image">
+                <span class="label">MCPP</span>
+            </a>
         </div>
+        <p>More on the ways</p>
     </div>
     <div class="card wide">
         <span class="header">My choices</span>
@@ -122,8 +57,8 @@
                 </span>
                 <span class="sup">
                     <span class="message success">know and use</span>
-                    <span class="message alert"> is ok</span>
-                    <span class="message error"> learning</span>
+                    <span class="message alert"> is fine</span>
+                    <span class="message error"> learning or planned</span>
                 </span>
             </div>
             <span class="separator"></span>
@@ -135,14 +70,20 @@
                 </span>
             </div>
             <span class="separator"></span>
-            <div class="flex column">
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column">
                 <span class="label">Play</span>
                 <span>Terraria, BG3, Cat Mario, ...</span>
+                <span class="sup">
+                    Don't often play by myself
+                </span>
             </div>
             <span class="separator"></span>
-            <div class="flex column">
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column">
                 <span class="label">Series</span>
                 <span>The Big Bang Theory, Infinity Train</span>
+                <span class="sup">
+                    and some other questionable stuff
+                </span>
             </div>
         </div>
     </div>
@@ -154,7 +95,7 @@
     <div class="card wide">
         <span class="header">Will code for money</span>
         <div class="flex">
-            <span class="text">websites</span>
+            <span class="text" onclick="sup(this)">websites</span>
             <span class="separator vertical"></span>
             <span class="text">webgames</span>
             <span class="separator vertical"></span>
@@ -164,10 +105,7 @@
         </div>
     </div>
     <div class="card linked flex wide">
-            <button class="btn text" onclick="this.innerHTML = 'thenameisluk'== this.innerHTML ? 'Discord' : 'thenameisluk'">Discord</button>
-            <button class="btn text" onclick="window.open('https:\/\/github.com/LukIsHere/','_blank')" >Github</a></button>
-            <button class="btn text" onclick="window.open('mailto:contact@lukishere.dev')">Mail</button>
-            <button class="btn text" onclick="window.open('https:\/\/twitter.com/lukistaken')">X</button>
+        <button class="btn text" onclick="this.innerHTML = 'thenameisluk'== this.innerHTML ? 'Discord' : 'thenameisluk'">Discord</button>
     </div>
     <span class="subtitle center">css used : <a href="https://github.com/ncpa0/ADWaveCSS/tree/master" target="_blank">here</a></span>
     <script src="./facts.js"></script>

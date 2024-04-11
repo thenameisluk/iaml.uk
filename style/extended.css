@@ -1,0 +1,102 @@
+.wide{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 17cm;
+    margin-top: 3mm;
+    text-align: center;
+    align-items: center;
+}
+.center{
+    align-self: center;
+}
+.auto-margin{
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-image{
+    width: 3cm;
+    margin-top: 1mm;
+    border-radius: 2mm;
+}
+.halfspace{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.flex{
+    justify-content: center;
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.block{
+    display: block;
+}
+.avatar{
+    width: 5cm; border-radius: 7mm;
+}
+.nodecoration{
+    text-decoration: none;
+}
+.sign{
+    text-align: right;
+    padding-right: 5%;
+}
+.sup{
+    opacity: 0;
+    height: 0;
+    transition: opacity 400ms;
+    transition: height 400ms;
+    display: block;
+}
+.yo>.sup{
+    opacity: 1;
+    height: 5mm;
+    display: block;
+}
+.vertical-sup{
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: bottom;
+    opacity: 0;
+    max-width: 0;
+    transition: opacity 400ms ease-in;
+    transition: max-width 400ms ease-in;
+    overflow: hidden;
+}
+.yo>.vertical-sup{
+    opacity: 1;
+    max-width: 100%;
+}
+.smooth{
+    transition: all 400ms;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.bubble{
+    display: block;
+    color: black;
+    padding: 1mm;
+    background-color: white;
+    top: 0;
+    left: 60%;
+    border-radius: 2mm;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+.yo>.bubble{
+    display: block;
+    opacity: 1;
+}
