@@ -98,10 +98,11 @@
 .bubble{
     display: block;
     color: black;
+    font-size: .3cm;
     padding: 1mm;
     background-color: white;
-    top: 0;
-    left: 60%;
+    top: -0.3cm;
+    left: 96%;
     border-radius: 2mm;
     opacity: 0;
     transition: opacity 300ms ease-in;
