@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luk</title>
+    <link rel="shortcut icon" href="./favicon16.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="./style/styles.css"> -->
+    <!-- <link rel="stylesheet" href="./style/extended.css"> -->
+</head>
+
+<body class="box linked vertical dark-theme text ccenter">
+    <!-- <span class="header">website being remade (again) most links don't work for now</span> -->
+    <p>
+        <img src="./obrazki/logo.webp" class="avatar">
+    </p>
+    <span class="header title relative">The name is Luk</span>
+    <!-- <span class="absolute bubble">bree</span><img
+            onclick="sup(this.parentElement)" style="height: 1cm;position: relative;top: 5px;"
+            src="./obrazki/breee.png"> -->
+    <p class="text" id="fact"></p>
+    <!-- <span class="separator"></span> -->
+    <div class="ncenter pushtop" style="background-color: rgb(16, 16, 16);">
+        <span class="header">Projects</span>
+        <a href="https://github.com/LukIsHere/DarkOS" target="_blank" class="card flex column spacer pushtop">
+            <img src="./obrazki/proj/do.png" class="center card-image">
+            <span class="label">Dark Os</span>
+        </a>
+        <a href="./subprojects/mcpp/" target="_blank" class="card flex column spacer pushtop">
+            <img src="./obrazki/proj/bmb.png" class="center card-image">
+            <span class="label">Bree my bash</span>
+        </a>
+        <a href="https://github.com/LukIsHere/graWzycie" target="_blank" class="card flex column spacer pushtop">
+            <img src="./obrazki/proj/gwz.png" class="center card-image">
+            <span class="label">Gra w Zycie</span>
+        </a>
+    </div>
+
+    </div>
+    <div class="" style="background-color: rgb(14, 14, 14);">
+        <span class="header">My choices</span>
+        <div class="flex column">
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column pushtop">
+                <span class="label">langueges</span>
+                <span>
+                    <span class="message success">C++, JavaScript, TypeScript,</span>
+                    <span class="message alert"> Java, Lua,</span>
+                    <span class="message error"> Rust</span>
+                </span>
+                <span class="sup">
+                    <span class="message success">know and often use</span>
+                    <span class="message alert"> is fine</span>
+                    <span class="message error"> learning or planned</span>
+                </span>
+            </div>
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column pushtop">
+                <span class="label">Programs</span>
+                <span>VSCode, Gimp, Aseprite</span>
+                <span class="sup">
+                    running linux Debian Testing with GNOME
+                </span>
+            </div>
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column pushtop">
+                <span class="label">Play</span>
+                <span>Terraria, BG3, Cat Mario, ...</span>
+                <span class="sup">
+                    Don't often play by myself
+                </span>
+            </div>
+            <div onclick="sup(this)" onpointerover="sup(this)" class="flex column pushtop">
+                <span class="label">Series</span>
+                <span>The Big Bang Theory, Infinity Train</span>
+                <span class="sup">
+                    and some other questionable stuff
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="nm" style="background-color: rgb(12, 12, 12);">
+        <span class="header">Blog</span>
+        <div class="limit smooth" id="blogs">
+            <p><a class="label" href="./blog/0/">How mcpp came to be</a><span class="text"> 11.04.2024</span></p>
+            <p class="limit-end">there is no more for now</p>
+        </div>
+        <p><button class="btn text" onclick="document.getElementById('blogs').classList.remove('limit')">more</button>
+        </p>
+    </div>
+    <script src="./facts.js"></script>
+    <script src="./sup.js"></script>
+</body>
+
+</html>
