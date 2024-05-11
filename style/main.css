@@ -28,9 +28,7 @@ titl{
     text-align: center;
 }
 huh{
-    position: relative;
     height: 0;
-    width: 100vw;
 }
 
 space{
@@ -38,13 +36,12 @@ space{
     position: absolute;
     /* background-color: red; */
     left: 5vw;
-    top: -18vh;
+    top: 79vh;
     z-index: 1;
     height: 25vh;
-    width: 100vw;
     overflow: hidden;
 }
-img{height: 100%;
+img{
     margin: 0;
     padding: 0;
 }
@@ -58,5 +55,7 @@ block{
 }
 topic{
     display: block;
+    font-weight: bold;
+    font-size: 1.5em;
     padding-top: 6vw;
 }
