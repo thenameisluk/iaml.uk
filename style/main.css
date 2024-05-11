@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'main';
+    src: url('/font/retro.woff2') format('woff2');
+  
+}
+body{
+    color: whitesmoke;
+    font-family: 'main';
+    font-size: 1cm;
+    padding: 0;
+    margin: 0;
+}
+
+.bg{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+titl{
+    padding-top: 30vw;
+    font-size: 200%;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+    font-size-adjust: initial;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+huh{
+    position: relative;
+    height: 0;
+    width: 100vw;
+}
+
+space{
+    display: flex;
+    position: absolute;
+    /* background-color: red; */
+    left: 5vw;
+    top: -18vh;
+    z-index: 1;
+    height: 25vh;
+    width: 100vw;
+    overflow: hidden;
+}
+img{height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+block{
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+topic{
+    display: block;
+    padding-top: 6vw;
+}
