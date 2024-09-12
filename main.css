@@ -12,6 +12,7 @@ name{
 }
 
 a{
+    color: rgb(236, 236, 17);
     text-decoration: none;
 }
 
@@ -21,7 +22,7 @@ img{
 }
 
 cpr{
-    font-size: 80%;
+    font-size: 70%;
     font-weight: 300;
 }
 
