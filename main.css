@@ -15,6 +15,10 @@ a{
     text-decoration: none;
 }
 
+ul{
+    margin: 1mm;
+}
+
 img{
     width: 70%;
     align-self: center;

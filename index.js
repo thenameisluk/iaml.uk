@@ -15,7 +15,7 @@ for(var i = 0;i<10;i++)
 
 el = document.querySelector("name")
 
-let textNow = "I am luk"
+let textNow = ""
 let textNext = ""
 let textErase = false;
 
