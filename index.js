@@ -10,9 +10,6 @@ let l = plep.length
 
 console.log(l)
 
-for(var i = 0;i<10;i++)
-    console.log(plep.random())
-
 el = document.querySelector("name")
 
 let textNow = ""
