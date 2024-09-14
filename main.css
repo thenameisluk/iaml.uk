@@ -5,12 +5,12 @@ body{
     font-size: 110%;
     /* background-image: radial-gradient( yellow, green); */
 
-    background-color: black;
+    background-color: rgb(19, 20, 2);
 
     /* background: -moz-radial-gradient(center, ellipse cover, hsl(222, 100%, 46%) 0%, #151515 100%); */
-    background: radial-gradient(rgb(19, 20, 2), #000);
-    height: 100vh;/*why? ;-;*/
-    overflow: hidden;/* ^ fix*/
+    /* background: radial-gradient(rgb(19, 20, 2), #000); */
+    /* height: 100vh;why? ;-; */
+    /* overflow: hidden;^ fix */
     z-index: 0;
 }
 
