@@ -1,12 +1,12 @@
 let title = document.querySelector("title")
 
-document.addEventListener("focus",()=>{
-    title.innerHTML = "Hi :3"
-})
+// document.addEventListener("focus",()=>{
+//     title.innerHTML = "Hi :3"
+// })
 
-document.addEventListener("blur",()=>{
-    title.innerHTML = "Bye ;-;"
-})
+// document.addEventListener("blur",()=>{
+//     title.innerHTML = "Bye ;-;"
+// })
 
 let sky = document.querySelector("sky")
 
