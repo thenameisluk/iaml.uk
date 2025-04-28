@@ -28,6 +28,10 @@ star{
     height: 5px;
 }
 
+note{
+    font-size: 60%;
+}
+
 @keyframes blink {
     0% {background: rgb(236, 236, 17);}
     50% {background: rgb(32, 32, 4);}

@@ -40,5 +40,5 @@ function restar(){
 window.addEventListener("resize",restar)
 restar()
 
-document.querySelector("cpr").innerHTML = "© luk 2024"
+document.querySelector("cpr").innerHTML = "© luk "+(new Date()).getFullYear()
 
