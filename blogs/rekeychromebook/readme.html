@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luk's blog</title>
+    <link rel="stylesheet" href="/main.css">
+    <!--google-->
+    <meta name="description" content="Projects luk works on.">
+    <meta name="keywords" content="thenameisluk, iamluk, luk, iaml, projects">
+    <meta name="author" content="Luk">
+    <!-- intern -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+    <sky>
+    </sky>
+    <centr>
+    <div>
+        <p><header id="l0"> Attempt at rekeying a chromebook</header></p><p>(this is not a solution, look below)</p><p></p><p></p><p><img src="./devmode.webp" alt="demode"></p><p></p><p>chromebooks with developer mode enabled (which is needed to boot non-chromeos)</p><p>have a big warning screen which for some might as well not exist</p><p></p><p>based on <a href="https://chromium.googlesource.com/chromiumos/platform/vboot_reference/+/refs/heads/main/futility/docs/cmd_gbb_utility.md">chrome os documentation</a> if we are able to generate key pair in <bold>correct format</bold> we should be able to <raw>futility gbb --set --rootkey=file img</raw> to modify the root key from debian side</p><p></p><p>we might also create some universal key (with known private key) everyone (who wants to) can set as recovery key so if they frick up their install they can use our debian image as recovery</p><p></p><p>which means we could drop <a href="https://github.com/hexdump0815/imagebuilder/blob/main/todo.txt">the modifying background shenanigans</a> and use our system like a normal system</p><p></p><p>if you think that sound to goot to be true you are right</p><p></p><p><header id="l2"> DO NOT attemp it</header></p><p></p><p>unless you are okay with losing your device</p><p></p><p><img src="./brick.jpeg" alt="image"></p><p></p><p>it will royally frick ur machine <bold>without</bold> any <bold>clear</bold> way of <bold>recovery</bold></p><p></p><p>as it turend out it's not as simple as swapping gbb key. we would also need to sign the already present firmware with them. Other wise you will <bold>not be able to boot anything</bold> on your device.</p><p></p><p><bold>the only reason</bold> i am even capable of fixing it, is fact my device is still vulnerable to sh1mmer (<bold>this is not always the case</bold>, i have strongbad device that's not vunerable to it, and <bold>that device would be a brick</bold> at this point)</p><p></p><p><img src="./sh1mmer.jpeg" alt="image"></p><p></p><p>i have two homestars (v3) and (v4) (it's likely not a good idea to exchange firmware between them) so i'm like double doomed since i have to manually extract my gbb backup from the oryginal one which doesn't have support for btrfs (while running sh1mmer)</p><p></p><p>have to dump 200gb fs into slow hdd</p><p>in order to open it on a diffrent device and get my gbb backup</p><p></p><p><img src="./dump.jpeg" alt="image"></p><p></p><p>true nightmare fuel</p><p>make sure to always disable software write protection</p><p><img src="./nightmare.jpeg" alt="image"></p><p></p><p>but my beloved is back</p><p><img src="./recovered.jpeg" alt="image"></p><p></p><p>not a great way to spend weekend</p><p></p><p><bold>but is there not hope?</bold></p><p></p><p>well there is in theory</p><p></p><p>if and only if someone firgures out the <a href="https://chromium.googlesource.com/chromiumos/platform/vboot_reference/+/master/scripts/image_signing/make_dev_firmware.sh">make_dev_firmware.sh</a> script and makes it work on debian</p><p>we might be able to actually perform that operation safely</p><p></p><p>but right now i am too traumatized to do it</p><p>i wish luck to anyone who would want to attempt that</p><p><bold>pls be careful</bold></p>
+    </div>
+    </centr>
+    <script src="/main.js"></script>
+</body>
+</html>

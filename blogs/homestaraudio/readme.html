@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luk's blog</title>
+    <link rel="stylesheet" href="/main.css">
+    <!--google-->
+    <meta name="description" content="Projects luk works on.">
+    <meta name="keywords" content="thenameisluk, iamluk, luk, iaml, projects">
+    <meta name="author" content="Luk">
+    <!-- intern -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+    <sky>
+    </sky>
+    <centr>
+    <div>
+        <p><header id="l0"> Fixing audio on homestar</header></p><p></p><p><img src="./homestar.jpeg" alt="homestar"></p><p></p><p>this is homestar and by default on debian its audio is not working</p><p></p><p>while someone managed to find "<a href="https://github.com/hexdump0815/imagebuilder/issues/44#issuecomment-1913130004">a solution</a>" it doesn't seam to be reproducible</p><p></p><p>there is <a href="https://github.com/hexdump0815/imagebuilder/issues/68#issuecomment-2186001368">temporary solution</a> that makes only speakers on one side work</p><p></p><p>after looking at <a href="https://gitlab.com/postmarketOS/pmaports/-/issues/2510#note_1813888035">this</a> i figured out a solution</p><p></p><p><block>luk@backluk:~$ diff /usr/share/alsa/ucm2/Qualcomm/sc7180/rt5682-max98357a/HiFi.conf ~/Pobrane/HiFi.conf 
+13c13
+< 		PlaybackChannels 2 <- broken
+---
+> 		PlaybackChannels 4 <- works
+</block></p><p>just put <a href="https://gitlab.com/-/project/8065375/uploads/ac23613adaf88501e0906a032d2f4b82/HiFi.conf">HiFi.conf</a> in <raw>/usr/share/alsa/ucm2/Qualcomm/sc7180/rt5682-max98357a/HiFi.conf</raw></p><p><details></p><p><summary>file content</summary></p><p></p><p><block># Use case configuration for ALC5682+MAX98357A on SC7180
+
+SectionVerb {
+	Value {
+		TQ "HiFi"
+	}
+}
+
+SectionDevice."Speaker" {
+	Comment "Speaker"
+
+	Value {
+		PlaybackChannels 4
+		PlaybackPCM "hw:${CardId},1"
+		PlaybackPriority 100
+		PlaybackMixerElem "Speaker"
+		PlaybackVolume "Speaker Playback Volume"
+	}
+}
+
+SectionDevice."Headphones" {
+	Comment "Headphones"
+
+	EnableSequence [
+		cset "name='HPOL Playback Switch' 1"
+		cset "name='HPOR Playback Switch' 1"
+		cset "name='Stereo1 DAC MIXL DAC L1 Switch' 1"
+		cset "name='Stereo1 DAC MIXR DAC R1 Switch' 1"
+	]
+
+	DisableSequence [
+		cset "name='HPOL Playback Switch' 0"
+		cset "name='HPOR Playback Switch' 0"
+		cset "name='Stereo1 DAC MIXL DAC L1 Switch' 0"
+		cset "name='Stereo1 DAC MIXR DAC R1 Switch' 0"
+	]
+
+	Value {
+		PlaybackPCM "hw:${CardId},0"
+		PlaybackPriority 200
+		PlaybackMasterElem "DAC1"
+		PlaybackMixerElem "Headphone"
+		PlaybackVolume "Headphone Playback Volume"
+	}
+}
+
+SectionDevice."Mic" {
+	Comment "Internal Microphone"
+
+	ConflictingDevice [
+		"Headset"
+	]
+
+	EnableSequence [
+		cset "name='IF1 01 ADC Swap Mux' 1"
+		cset "name='Stereo1 ADC L2 Mux' 1"
+		cset "name='Stereo1 ADC R2 Mux' 1"
+		cset "name='Stereo1 ADC MIXL ADC2 Switch' 1"
+		cset "name='Stereo1 ADC MIXR ADC2 Switch' 1"
+	]
+
+	DisableSequence [
+		cset "name='Stereo1 ADC L2 Mux' 0"
+		cset "name='Stereo1 ADC R2 Mux' 0"
+		cset "name='Stereo1 ADC MIXL ADC2 Switch' 0"
+		cset "name='Stereo1 ADC MIXR ADC2 Switch' 0"
+	]
+
+	Value {
+		CapturePCM "hw:${CardId},0"
+		CapturePriority 100
+		CaptureMixerElem "STO1 ADC"
+		CaptureVolume "STO1 ADC Capture Volume"
+	}
+}
+
+SectionDevice."Headset" {
+	Comment "Headset Microphone"
+
+	EnableSequence [
+		cset "name='IF1 01 ADC Swap Mux' 2"
+		cset "name='Stereo1 ADC L1 Mux' 1"
+		cset "name='Stereo1 ADC R1 Mux' 1"
+		cset "name='Stereo1 ADC MIXL ADC1 Switch' 1"
+		cset "name='Stereo1 ADC MIXR ADC1 Switch' 1"
+	]
+
+	DisableSequence [
+		cset "name='Stereo1 ADC L1 Mux' 0"
+		cset "name='Stereo1 ADC R1 Mux' 0"
+		cset "name='Stereo1 ADC MIXL ADC1 Switch' 0"
+		cset "name='Stereo1 ADC MIXR ADC1 Switch' 0"
+	]
+
+	Value {
+		CapturePCM "hw:${CardId},0"
+		CapturePriority 200
+		CaptureMixerElem "STO1 ADC"
+		CaptureVolume "STO1 ADC Capture Volume"
+	}
+}
+</block></p><p></details></p><p></p><p>reboot your device and now it works 🥳🥳🥳</p><p><img src="./working.png" alt="obraz"></p><p></p><p><header id="l2"> There is more</header></p><p></p><p>but we can go one step further</p><p></p><p>i figured i might as well as give ya sth from myself to this </p><p></p><p>like getting rid of non existing headphones</p><p></p><p><img src="./headp.png" alt="obraz"></p><p></p><p>so i looked at <a href="https://github.com/hexdump0815/imagebuilder/blob/main/systems/chromebook_trogdor/extra-files/usr/share/alsa/ucm2/SC7180/HiFi.conf">this monster</a> where author just decided to just comment it out</p><p></p><p><header id="l2"> one bleblesh later 🛠️</header></p><p></p><p>we have a file <a href="https://github.com/user-attachments/files/17055968/HiFi.conf.txt">HiFi.conf.txt</a> (i cannot upload it as just .conf because github)</p><p><details></p><p><summary>file content</summary></p><p></p><p><block># Use case configuration for ALC5682+MAX98357A on SC7180
+
+SectionVerb {
+	Value {
+		TQ "HiFi"
+	}
+}
+
+SectionDevice."Speaker" {
+	Comment "Speaker"
+
+	Value {
+		PlaybackChannels 4
+		PlaybackPCM "hw:${CardId},1"
+		PlaybackPriority 100
+		PlaybackMixerElem "Speaker"
+		PlaybackVolume "Speaker Playback Volume"
+	}
+}
+
+#SectionDevice."Headphones" {
+#	Comment "Headphones"
+#
+#	EnableSequence [
+#		cset "name='HPOL Playback Switch' 1"
+#		cset "name='HPOR Playback Switch' 1"
+#		cset "name='Stereo1 DAC MIXL DAC L1 Switch' 1"
+#		cset "name='Stereo1 DAC MIXR DAC R1 Switch' 1"
+#	]
+#
+#	DisableSequence [
+#		cset "name='HPOL Playback Switch' 0"
+#		cset "name='HPOR Playback Switch' 0"
+#		cset "name='Stereo1 DAC MIXL DAC L1 Switch' 0"
+#		cset "name='Stereo1 DAC MIXR DAC R1 Switch' 0"
+#	]
+#
+#	Value {
+#		PlaybackPCM "hw:${CardId},0"
+#		PlaybackPriority 200
+#		PlaybackMasterElem "DAC1"
+#		PlaybackMixerElem "Headphone"
+#		PlaybackVolume "Headphone Playback Volume"
+#	}
+#}
+
+SectionDevice."Mic" {
+	Comment "Internal Microphone"
+
+#	ConflictingDevice [
+#		"Headset"
+#	]
+
+	EnableSequence [
+		cset "name='IF1 01 ADC Swap Mux' 1"
+		cset "name='Stereo1 ADC L2 Mux' 1"
+		cset "name='Stereo1 ADC R2 Mux' 1"
+		cset "name='Stereo1 ADC MIXL ADC2 Switch' 1"
+		cset "name='Stereo1 ADC MIXR ADC2 Switch' 1"
+	]
+
+	DisableSequence [
+		cset "name='Stereo1 ADC L2 Mux' 0"
+		cset "name='Stereo1 ADC R2 Mux' 0"
+		cset "name='Stereo1 ADC MIXL ADC2 Switch' 0"
+		cset "name='Stereo1 ADC MIXR ADC2 Switch' 0"
+	]
+
+	Value {
+		CapturePCM "hw:${CardId},0"
+		CapturePriority 100
+		CaptureMixerElem "STO1 ADC"
+		CaptureVolume "STO1 ADC Capture Volume"
+	}
+}
+
+#SectionDevice."Headset" {
+#	Comment "Headset Microphone"
+#
+#	EnableSequence [
+#		cset "name='IF1 01 ADC Swap Mux' 2"
+#		cset "name='Stereo1 ADC L1 Mux' 1"
+#		cset "name='Stereo1 ADC R1 Mux' 1"
+#		cset "name='Stereo1 ADC MIXL ADC1 Switch' 1"
+#		cset "name='Stereo1 ADC MIXR ADC1 Switch' 1"
+#	]
+#
+#	DisableSequence [
+#		cset "name='Stereo1 ADC L1 Mux' 0"
+#		cset "name='Stereo1 ADC R1 Mux' 0"
+#		cset "name='Stereo1 ADC MIXL ADC1 Switch' 0"
+#		cset "name='Stereo1 ADC MIXR ADC1 Switch' 0"
+#	]
+#
+#	Value {
+#		CapturePCM "hw:${CardId},0"
+#		CapturePriority 200
+#		CaptureMixerElem "STO1 ADC"
+#		CaptureVolume "STO1 ADC Capture Volume"
+#	}
+#}
+</block></p><p></details></p><p></p><p>again put it here <raw>/usr/share/alsa/ucm2/Qualcomm/sc7180/rt5682-max98357a/HiFi.conf</raw> ... now reboot</p><p></p><p>and it works 🎉🎉🎉🎈</p><p><img src="./works2.png" alt="Zrzut ekranu z 2024-09-19 10-23-04"></p><p></p><p><header id="l2"> One more</header></p><p></p><p>we forgot about hdmi</p><p></p><p>(there is no hdmi port but you can use usb-c to hdmi adapter)</p><p></p><p>but there is a problem, if we include hdmi in ucm while it's not plugget in there is no audio.</p><p></p><p>so i have figured out not perfect solution</p><p></p><p>by conflicting hdmi with speaker we can get it to configure only when available</p><p></p><p>if we don't do that the ucm doesn't work again (<a href="https://github.com/alsa-project/alsa-ucm-conf/issues/442#issuecomment-2411665486">why?</a> idk)</p><p><block># Use case configuration for ALC5682+MAX98357A on SC7180
+
+SectionVerb {
+	Value {
+		TQ "HiFi"
+	}
+}
+
+SectionDevice."Speaker" {
+	Comment "Speaker"
+
+	Value {
+		PlaybackChannels 4
+		PlaybackPCM "hw:${CardId},1"
+		PlaybackPriority 100
+		PlaybackMixerElem "Speaker"
+		PlaybackVolume "Speaker Playback Volume"
+	}
+}
+
+SectionDevice."Mic" {
+	Comment "Internal Microphone"
+
+	EnableSequence [
+		cset "name='IF1 01 ADC Swap Mux' 1"
+		cset "name='Stereo1 ADC L2 Mux' 1"
+		cset "name='Stereo1 ADC R2 Mux' 1"
+		cset "name='Stereo1 ADC MIXL ADC2 Switch' 1"
+		cset "name='Stereo1 ADC MIXR ADC2 Switch' 1"
+	]
+
+	DisableSequence [
+		cset "name='Stereo1 ADC L2 Mux' 0"
+		cset "name='Stereo1 ADC R2 Mux' 0"
+		cset "name='Stereo1 ADC MIXL ADC2 Switch' 0"
+		cset "name='Stereo1 ADC MIXR ADC2 Switch' 0"
+	]
+
+	Value {
+		CapturePCM "hw:${CardId},0"
+		CapturePriority 100
+		CaptureMixerElem "STO1 ADC"
+		CaptureVolume "STO1 ADC Capture Volume"
+	}
+}
+
+SectionDevice."HDMI" {
+	Comment "HDMI"
+
+#fixes the conflict
+	ConflictingDevice [
+		"Speaker"
+	]
+
+	Value {
+		PlaybackPriority 200
+		PlaybackPCM "hw:${CardId},2"
+		JackControl "sc7180-rt5682-max98357a-1mic HDMI Jack"
+	}
+	EnableSequence [
+	]
+	DisableSequence [
+	]
+}
+</block></p><p></p><p>meaning that when you plug in hdmi you just need to run <raw>systemctl --user restart pipewire</raw> for hdmi to get configured</p><p>and after unpluging run again for it to disappear from the device menu</p><p><img src="./hdmi.png" alt="obraz"></p><p></p><p>it's not ideal but works</p><p></p><p>i know that unplugging and plugging in the devices triggers</p><p><block>node hw:0, #9 (0,0,0,HDMI Jack,0) VALUE
+</block></p><p>in <raw>sudo alsactl monitor</raw> but i have no idea how to use it</p><p></p><p>and as long as it works it's fine</p>
+    </div>
+    </centr>
+    <script src="/main.js"></script>
+</body>
+</html>
