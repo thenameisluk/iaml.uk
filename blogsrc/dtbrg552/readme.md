@@ -1,0 +1,232 @@
+# Getting rg552 to work with debian
+
+![image](./rg552.png)
+
+this is rg552 a console [supported by velvet os](https://github.com/hexdump0815/imagebuilder/blob/main/systems/console_rg552/readme.md)
+
+i got dts for joysticks and buttons working pretty quickly
+<details>
+<summary>
+the buttons and joysticks .dts part
+</summary>
+
+```c
+	/*gamepad*/
+
+	gpio_mux: mux-controller {
+		status = "okay";
+		compatible = "gpio-mux";
+		#mux-control-cells = <0>;
+
+		mux-gpios = <&gpio1 RK_PA1 GPIO_ACTIVE_LOW>,
+			    <&gpio1 RK_PA0 GPIO_ACTIVE_LOW>;
+		/*mux-en-gpio = <&gpio1 RK_PA4 GPIO_ACTIVE_LOW>; // FIXME: unused in driver*/
+	};
+
+	adc_mux: adc-mux {
+		status = "okay";
+		compatible = "io-channel-mux";
+		io-channels = <&saradc 4>;
+		io-channel-names = "parent";
+		#io-channel-cells = <1>;
+
+		mux-controls = <&gpio_mux>;
+
+		channels = "0", "1", "2", "3";
+		settle-time-us = <100>;
+	};
+
+	adc-joystick {
+		compatible = "adc-joystick";
+		io-channels = <&adc_mux 0>,
+			      <&adc_mux 1>,
+			      <&adc_mux 2>,
+			      <&adc_mux 3>;
+		#address-cells = <1>;
+		#size-cells = <0>;
+		poll-interval = <60>;
+		
+		axis@0 {
+			reg = <0>;
+			abs-flat = <32>;
+			abs-fuzz = <16>;
+			abs-range = <1024 0>;
+			linux,code = <ABS_X>;
+		};
+
+		axis@1 {
+			reg = <1>;
+			abs-flat = <32>;
+			abs-fuzz = <16>;
+			abs-range = <0 1024>;
+			linux,code = <ABS_RX>;
+		};
+
+		axis@2 {
+			reg = <2>;
+			abs-flat = <32>;
+			abs-fuzz = <16>;
+			abs-range = <1024 0>;
+			linux,code = <ABS_Y>;
+		};
+
+		axis@3 {
+			reg = <3>;
+			abs-flat = <32>;
+			abs-fuzz = <16>;
+			abs-range = <0 1024>;
+			linux,code = <ABS_RY>;
+		};
+	};
+
+	gpio-buttons {
+		compatible = "gpio-keys";
+		pinctrl-names = "default";
+		pinctrl-0 = <&btn_pins>;
+
+		sw1 {
+		        gpios = <&gpio3 RK_PA0 GPIO_ACTIVE_LOW>;
+		        label = "GPIO DPAD-UP";
+		        linux,code = <BTN_DPAD_UP>;
+		};
+		sw2 {
+		        gpios = <&gpio3 RK_PA1 GPIO_ACTIVE_LOW>;
+		        label = "GPIO DPAD-DOWN";
+		        linux,code = <BTN_DPAD_DOWN>;
+		};
+		sw3 {
+		        gpios = <&gpio3 RK_PA3 GPIO_ACTIVE_LOW>;
+		        label = "GPIO DPAD-LEFT";
+		        linux,code = <BTN_DPAD_LEFT>;
+		};
+		sw4 {
+		        gpios = <&gpio3 RK_PA2 GPIO_ACTIVE_LOW>;
+		        label = "GPIO DPAD-RIGHT";
+		        linux,code = <BTN_DPAD_RIGHT>;
+		};
+		sw5 {
+		        gpios = <&gpio3 RK_PA6 GPIO_ACTIVE_LOW>;
+		        label = "GPIO KEY BTN-A";
+		        linux,code = <BTN_EAST>;
+		};
+		sw6 {
+		        gpios = <&gpio3 RK_PA7 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN-B";
+		        linux,code = <BTN_SOUTH>;
+		};
+		sw7 {
+		        gpios = <&gpio3 RK_PA4 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN-X";
+		        linux,code = <BTN_NORTH>;
+		};
+		sw8 {
+		        gpios = <&gpio3 RK_PA5 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN-Y";
+		        linux,code = <BTN_WEST>;
+		};
+		sw9 {
+		        gpios = <&gpio3 RK_PB1 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_SELECT";
+		        linux,code = <BTN_SELECT>;
+		};
+		sw10 {
+		        gpios = <&gpio3 RK_PB0 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_START";
+		        linux,code = <BTN_START>;
+		};
+		sw11 {
+		        gpios = <&gpio3 RK_PC0 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_F";
+		        linux,code = <BTN_MODE>;
+		};
+		sw12 {
+		        gpios = <&gpio3 RK_PD0 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_TL";
+		        linux,code = <BTN_TL>;
+		};
+		sw13 {
+		        gpios = <&gpio3 RK_PD2 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_TR";
+		        linux,code = <BTN_TR>;
+		};
+		sw14 {
+		        gpios = <&gpio3 RK_PD1 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_TL2";
+		        linux,code = <BTN_TL2>;
+		};
+		sw15 {
+		        gpios = <&gpio3 RK_PD3 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_TR2";
+		        linux,code = <BTN_TR2>;
+		};
+		sw16 {
+		        gpios = <&gpio3 RK_PB3 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_THUMBL";
+		        linux,code = <BTN_THUMBL>;
+		};
+		sw17 {
+		        gpios = <&gpio3 RK_PB4 GPIO_ACTIVE_LOW>;
+		        label = "GPIO BTN_THUMBR";
+		        linux,code = <BTN_THUMBR>;
+		};
+	};
+
+	/*end gamepad*/
+```
+</details>
+i still don't fully get dts's yet it wasn't hard
+the special driver rocknix came up with seams like a total overkill
+
+but then the wifi broke again because why not
+
+and after testing it seamd to be only broken when the ^ gpio keys part of dts was present (the joystic's were fine for whatever reason)
+
+i assumed it was insufficient power issue or similar, tried to mitigate that for half a day
+
+also both wifi and buttons using gpio3 was another misleading factor
+
+when i finally got tired, just for fun i tried replacing
+```c
+	vcc_wifi: vcc-wifi-regulator {
+		compatible = "regulator-fixed";
+		enable-active-high;
+		enable-gpios  = <&gpio3 RK_PC1 GPIO_ACTIVE_HIGH>;
+		gpio = <&gpio0 RK_PB5 GPIO_ACTIVE_HIGH>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&wifi_pwr>;
+		regulator-name = "wifi_enable";
+		regulator-always-on;
+		regulator-boot-on;
+	};
+```
+with sth else
+
+like [gpio regulator](https://www.kernel.org/doc/Documentation/devicetree/bindings/regulator/gpio-regulator.txt)
+which functionally should effectively do the same thing as [fixed regulator](https://www.kernel.org/doc/Documentation/devicetree/bindings/regulator/fixed-regulator.txt) (but have ability to change states that i don't even use)
+'ve managed to compose
+```c
+	vcc_wifi: gpio-regulator {
+		compatible = "regulator-gpio";
+
+		regulator-min-microvolt = <0>;
+		regulator-max-microvolt = <5000000>;
+
+		states = <	5000000 0x2
+			  	0 0x1
+			  	5000000 0x0>;
+
+		enable-active-high;
+		enable-gpios  = <&gpio3 RK_PC1 GPIO_ACTIVE_HIGH>;
+		gpio = <&gpio0 RK_PB5 GPIO_ACTIVE_HIGH>;
+		pinctrl-names = "default";
+		pinctrl-0 = <&wifi_pwr>;
+		regulator-name = "wifi_enable";
+
+		// regulator-always-on;
+		regulator-boot-on;
+	};
+```
+
+and after using it instead, wifi just worked™
+
+no idea why but at this point i didn't care and just took it
