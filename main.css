@@ -62,7 +62,7 @@ ul{
 }
 
 img{
-    width: 100%;
+    max-width: 50vw;
     align-self: center;
 }
 
