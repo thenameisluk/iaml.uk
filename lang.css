@@ -1,0 +1,36 @@
+pl{
+    display: none;
+}
+en{
+    display: none;
+}
+
+body[language="en"] en{
+    display: unset;
+}
+
+body[language="pl"] pl{
+    display: unset;
+}
+
+body[language="en"] .no-en{
+    display: none;
+}
+
+body[language="pl"] .no-pl{
+    display: none;
+}
+langtab{
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    display: block;
+    width: fit-content;
+    /* width: 5%; */
+}
+.flag{
+    height: 5vh;
+    max-width: 10vw;
+    /* max-height: 10vh; */
+    /* min-width: 3vh; */
+}

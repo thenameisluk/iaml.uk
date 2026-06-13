@@ -5,7 +5,11 @@ Array.prototype.random = function(){
 let sec = 1000
 let min = 60*sec
 
-let plep = [ "I am luk", "The name is luk", "thenameisluk", "Luk says hi" ]
+let plep = {
+    en:[ "I am luk", "The name is luk", "thenameisluk", "Luk says hi" ],
+    pl:["Jestem luk","Nazywam się luk", "thenameisluk", "Luk mówi cześć"]
+}
+
 let l = plep.length
 
 console.log(l)
@@ -17,7 +21,7 @@ let textNext = ""
 let textErase = false;
 
 function plepType(){
-    textNext = plep.random()
+    textNext = plep[document.body.getAttribute("language")].random()
     textErase = true
 
     if(textNow==textNext){
